@@ -32,53 +32,53 @@
         Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
       </p>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__user">
-          <div class="form__surname">
-            <label class="form__surname-label" for="surname-field">Фамилия:</label>
-            <input class="form__surname-field" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" required>
+        <fieldset class="form__fieldset">
+          <div class="form__user-wrapper">
+            <label class="form__text-label" for="surname-field">Фамилия:</label>
+            <input class="form__text-field" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" required>
           </div>
-          <div class="form__name">
-            <label class="form__name-label" for="name-field">Имя:</label>
-            <input class="form__name-field" type="text" name="surname" id="name-field" placeholder="Введите ваше имя *" required>
+          <div class="form__user-wrapper">
+            <label class="form__text-label" for="name-field">Имя:</label>
+            <input class="form__text-field" type="text" name="name" id="name-field" placeholder="Введите ваше имя *" required>
           </div>
-          <div class="form__middle-name">
-            <label class="form__middle-name-label" for="middle-name-field">Отчество:</label>
-            <input class="form__middle-name-field" type="text" name="surname" id="middle-name-field" placeholder="Ну и отчество тоже">
+          <div class="form__user-wrapper">
+            <label class="form__text-label" for="middle-name-field">Отчество:</label>
+            <input class="form__text-field" type="text" name="middle-name" id="middle-name-field" placeholder="Ну и отчество тоже">
           </div>
         </fieldset>
-        <fieldset class="form__progress">
-          <legend class="form__progress-legend">Ваши безбашенные достижения в путешествии</legend>
-          <label class="form__progress-label" for="box1">Сделал селфи с акулой</label>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
           <input class="form__progress-input" type="checkbox" name="box1" id="box1" checked>
-          <label class="form__progress-label" for="box2">Обгорел на пляже</label>
+          <label class="form__progress-label" for="box1">Сделал селфи с акулой</label>
           <input class="form__progress-input" type="checkbox" name="box2" id="box2" checked>
-          <label class="form__progress-label" for="box3">Видел Чака Норриса</label>
+          <label class="form__progress-label" for="box2">Обгорел на пляже</label>
           <input class="form__progress-input" type="checkbox" name="box2" id="box3">
-          <label class="form__progress-label" for="box4">Накупил сувениров</label>
+          <label class="form__progress-label" for="box3">Видел Чака Норриса</label>
           <input class="form__progress-input" type="checkbox" name="box2" id="box4">
-          <label class="form__progress-label" for="box5">Удержал башню</label>
+          <label class="form__progress-label" for="box4">Накупил сувениров</label>
           <input class="form__progress-input" type="checkbox" name="box2" id="box5" checked>
-          <label class="form__progress-label" for="box6">Разгромил отель</label>
+          <label class="form__progress-label" for="box5">Удержал башню</label>
           <input class="form__progress-input" type="checkbox" name="box2" id="box6">
+          <label class="form__progress-label" for="box6">Разгромил отель</label>
         </fieldset>
-        <fieldset class="form__contact-info">
-          <legend class="form__contact-info-legend">Контактная информация</legend>
-          <label class="form__phone-label" for="phone-field">Номер телефона</label>
-          <input class="form__phone-field" type="tel" name="phone" id="phone-field" placeholder="Номер, пожалуйста" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
-          <label class="form__email-label" for="email-field">Адрес почты</label>
-          <input class="form__email-field" type="email" name="email" id="email-field" placeholder="Введите почту *" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Контактная информация</legend>
+          <label class="form__text-label" for="phone-field">Номер телефона</label>
+          <input class="form__text-field form__text-field--phone" type="tel" name="phone" id="phone-field" placeholder="Номер, пожалуйста" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
+          <label class="form__text-label" for="email-field">Адрес почты</label>
+          <input class="form__text-field form__text-field--letter" type="email" name="email" id="email-field" placeholder="Введите почту *" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
         </fieldset>
-        <fieldset class="form__type-of-app">
-          <legend class="form__type-of-app-legend">С каким приложением путешествовали?</legend>
-            <input class="form__ios-field" type="radio" name="app" id="ios-field" value="ios" checked>
-            <label class="form__ios-label" for="ios-field">Pink для iOS</label>
-            <input class="form__android-field" type="radio" name="app" id="android-field" value="android">
-            <label class="form__android-label" for="android-field">Pink на Android</label>
-            <input class="form__windows-field" type="radio" name="app" id="windows-field" value="windows">
-            <label class="form__windows-label" for="windows-field">Windows Phone</label>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">С каким приложением путешествовали?</legend>
+            <input class="form__radio-field" type="radio" name="app" id="ios-field" value="ios" checked>
+            <label class="form__radio-label" for="ios-field">Pink для iOS</label>
+            <input class="form__radio-field" type="radio" name="app" id="android-field" value="android">
+            <label class="form__radio-label" for="android-field">Pink на Android</label>
+            <input class="form__radio-field" type="radio" name="app" id="windows-field" value="windows">
+            <label class="form__radio-label" for="windows-field">Windows Phone</label>
         </fieldset>
-        <fieldset class="form__description">
-          <legend class="form__description-legend">Опишите свои эмоции</legend>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Опишите свои эмоции</legend>
           <textarea class="form__description-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
         <button class="form__button" type="submit">Отправить форму</button>
