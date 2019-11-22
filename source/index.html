@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>HTML Academy: Pink</title>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Pink</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo main-logo">
-      <img class="main-logo__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип PINK">
+    <a class="page-header__logo">
+      <img class="page-header__image" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип PINK">
     </a>
     <nav class="page-header__nav main-nav">
       <button class="main-nav__toggle" type="button">Переключить меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active"><a>Главная</a></li>
-          <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
-          <li class="site-list__item"><a href="form.html">Конкурс</a></li>
-          <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link site-list__link--current">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -26,22 +35,22 @@
     <section class="download">
       <h2 class="visually-hidden">Скачать приложение Pink</h2>
       <p class="download__title">Взгляните на жизнь иначе!</p>
-      <img class="download__image-main" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Телефон в руке">
+      <img class="download__image-main" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Телефон в руке">
       <a class="download__button" href="https://www.apple.com/ru/ios/app-store" target="_blank">Скачать приложение</a>
       <ul class="download__list">
         <li class="download__item">
           <a class="download__link" href="https://www.apple.com/ru/ios/app-store" target="_blank">
-            <img class="download__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Лого Apple">
+            <img class="download__image" src="img/logo-apple.svg" width="46" height="57" alt="Лого Apple">
           </a>
         </li>
         <li class="download__item">
           <a class="download__link" href="https://play.google.com/store" target="_blank">
-            <img class="download__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Лого Android">
+            <img class="download__image" src="img/logo-android.svg" width="42" height="47" alt="Лого Android">
           </a>
         </li>
         <li class="download__item">
           <a class="download__link" href="https://www.microsoft.com/ru-ru/store/" target="_blank">
-            <img class="download__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Лого Windows">
+            <img class="download__image" src="img/logo-microsoft.svg" width="44" height="42" alt="Лого Windows">
           </a>
         </li>
       </ul>
@@ -52,21 +61,21 @@
         <h2 class="visually-hidden">Преимущества приложения Pink</h2>
         <p class="advantages__intro">Устали от серости мегаполиса?</p>
         <p class="advantages__intro">Нам есть, что вам предложить!</p>
-        <ul class="advantages__list">
-          <li class="advantages__item advantages__item--gray">
-            <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </li>
-          <li class="advantages__item advantages__item--pink">
-            <h3 class="advantages__title">Меняет мир вокруг</h3>
-            <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="advantages__item advantages__item--smile">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
       </header>
+      <ul class="advantages__list">
+        <li class="advantages__item advantages__item--gray">
+          <h3 class="advantages__title">Поднимает настроение</h3>
+          <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </li>
+        <li class="advantages__item advantages__item--pink">
+          <h3 class="advantages__title">Меняет мир вокруг</h3>
+          <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </li>
+        <li class="advantages__item advantages__item--smile">
+          <h3 class="advantages__title">Заводит новых друзей</h3>
+          <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+        </li>
+      </ul>
     </section>
     <section class="reviews">
       <h2 class="visually-hidden">Отзывы о приложении Pink</h2>
@@ -118,16 +127,16 @@
       <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
       <div class="contacts__info">
         <div class="contacts__call-info">
-          <b class="contacts__call">Звоните:</b>
-          <a class="contacts__phone" href="tel:+78125556666">+7 (812) 555-66-66</a>
+          <b class="contacts__info-title">Звоните:</b>
+          <a class="contacts__info-detail" href="tel:+78125556666">+7 (812) 555-66-66</a>
         </div>
         <div class="contacts__write-info">
-          <b class="contacts__write">Пишите:</b>
-          <a class="contacts__email" href="email:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <b class="contacts__info-title">Пишите:</b>
+          <a class="contacts__info-detail" href="email:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
         <div class="contacts__welcome-info">
-          <b class="contacts__welcome">Приезжайте в гости:</b>
-          <address class="contacts__address">ул. Большая Конюшенная, 19/8</address>
+          <b class="contacts__info-title">Приезжайте в гости:</b>
+          <address class="contacts__info-detail">ул. Большая Конюшенная, 19/8</address>
         </div>
       </div>
     </section>
@@ -137,23 +146,23 @@
     <footer class="page-footer page-footer--hide">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo footer-logo">
-          <img class="footer-logo__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип PINK">
+          <img class="footer-logo__image" src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип PINK">
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="#" aria-label="Твиттер">
-                <img class="social__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Твиттер">
+                <img class="social__image" src="img/icon-twitter.svg" width="18" height="15" alt="Твиттер">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#" aria-label="Фейсбук">
-                <img class="social__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Фейсбук">
+                <img class="social__image" src="img/icon-facebook.svg" width="9" height="19" alt="Фейсбук">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#" aria-label="YouTube">
-                <img class="social__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="YouTube">
+                <img class="social__image" src="img/icon-youtube.svg" width="15" height="14" alt="YouTube">
               </a>
             </li>
           </ul>
@@ -161,7 +170,7 @@
         <div class="page-footer__copyright copyright">
           <span class="copyright__text">Разработано</span>
           <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="HTML Academy">
+            <img class="copyright__image" src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy">
           </a>
         </div>
       </div>

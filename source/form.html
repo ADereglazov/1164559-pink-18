@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>HTML Academy: Pink</title>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Pink</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo main-logo" href="index.html">
-      <img class="main-logo__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип PINK">
+    <a class="page-header__logo" href="index.html">
+      <img class="page-header_image" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип PINK">
     </a>
     <nav class="page-header__nav main-nav">
       <button class="main-nav__toggle" type="button">Переключить меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a href="index.html">Главная</a></li>
-          <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
-          <li class="site-list__item site-list__item--active"><a>Конкурс</a></li>
-          <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link site-list__link--current">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -46,7 +55,7 @@
             <input class="form__text-field" type="text" name="middle-name" id="middle-name-field" placeholder="Ну и отчество тоже">
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--gray">
           <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
           <input class="form__progress-input" type="checkbox" name="box1" id="box1" checked>
           <label class="form__progress-label" for="box1">Сделал селфи с акулой</label>
@@ -68,7 +77,7 @@
           <label class="form__text-label" for="email-field">Адрес почты</label>
           <input class="form__text-field form__text-field--letter" type="email" name="email" id="email-field" placeholder="Введите почту *" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
         </fieldset>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--gray">
           <legend class="form__legend">С каким приложением путешествовали?</legend>
             <input class="form__radio-field" type="radio" name="app" id="ios-field" value="ios" checked>
             <label class="form__radio-label" for="ios-field">Pink для iOS</label>
@@ -87,32 +96,32 @@
     </section>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__logo footer-logo" href="index.html">
-          <img class="footer-logo__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Логотип PINK">
+        <a class="page-footer__logo footer-logo">
+          <img class="footer-logo__image" src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип PINK">
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="#" aria-label="Твиттер">
-                <img class="social__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Твиттер">
+                <img class="social__image" src="img/icon-twitter.svg" width="18" height="15" alt="Твиттер">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#" aria-label="Фейсбук">
-                <img class="social__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Фейсбук">
+                <img class="social__image" src="img/icon-facebook.svg" width="9" height="19" alt="Фейсбук">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#" aria-label="YouTube">
-                <img class="social__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="YouTube">
+                <img class="social__image" src="img/icon-youtube.svg" width="15" height="14" alt="YouTube">
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <span class="copyright__text">Разработано</span>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__image" src="https://via.placeholder.com/150x150" width="150" height="150" alt="HTML Academy">
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copyright__image" src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy">
           </a>
         </div>
       </div>

@@ -1,0 +1,49 @@
+.download {
+  background-color: @blue-darken;
+  text-align: center;
+  color: @white;
+}
+
+.download__title {
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.download__button {
+  display: block;
+  width: 280px;
+  height: 55px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 13px;
+  color: @white;
+  background-color: @blue-darken;
+  border: 3px solid @white;
+  border-radius: 27px;
+
+  &:hover {
+    color: @pink;
+    background-color: @white;
+    border-color: @white;
+  }
+
+  &:active {
+    outline: none;
+    color: @pink-opacity03;
+    background-color: @white;
+    border-color: @white;
+  }
+}
+
+.download__list {
+  .list-reset();
+}
+
+.download__text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
