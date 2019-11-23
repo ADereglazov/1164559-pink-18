@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: center;
   width: 56px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slider__toggle {
@@ -12,10 +14,15 @@
   padding: 0;
   border: 3px solid @blue-dark-opacity03;
   border-radius: 50%;
-  background-color: @blue-dark-opacity03;
 
   &:hover {
     cursor: pointer;
+    border-color: @blue-dark-opacity06;
+  }
+
+  &:active {
+    outline: none;
+    border-color: @blue-dark-opacity01;
   }
 
   &--current {
@@ -26,6 +33,7 @@
 
     &:hover {
       cursor: default;
+      border-color: @blue-dark;
     }
   }
 }
