@@ -1,0 +1,31 @@
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 56px;
+}
+
+.slider__toggle {
+  display: block;
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: 3px solid @blue-dark-opacity03;
+  border-radius: 50%;
+  background-color: @blue-dark-opacity03;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--current {
+    width: 12px;
+    height: 12px;
+    border: 3px solid @blue-dark;
+    background-color: transparent;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}
