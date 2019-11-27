@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Pink</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -36,27 +38,33 @@
     <h1 class="visually-hidden">Pink - раскрась серые будни в розовый цвет!</h1>
     <section class="download">
       <h2 class="visually-hidden">Скачать приложение Pink</h2>
-      <p class="download__title">Взгляните на жизнь иначе!</p>
-      <img class="download__image-main" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Телефон в руке">
-      <a class="download__button" href="https://www.apple.com/ru/ios/app-store" target="_blank" aria-label="Apple Store">Скачать приложение</a>
-      <ul class="download__list">
-        <li class="download__item">
-          <a class="download__link" href="https://www.apple.com/ru/ios/app-store" target="_blank" aria-label="Apple Store">
-            <img class="download__image" src="img/logo-apple.svg" width="46" height="57" alt="Лого Apple">
-          </a>
-        </li>
-        <li class="download__item">
-          <a class="download__link" href="https://play.google.com/store" target="_blank" aria-label="Play Market">
-            <img class="download__image" src="img/logo-android.svg" width="42" height="47" alt="Лого Android">
-          </a>
-        </li>
-        <li class="download__item">
-          <a class="download__link" href="https://www.microsoft.com/ru-ru/store/" target="_blank" aria-label="Windows Store">
-            <img class="download__image" src="img/logo-microsoft.svg" width="44" height="42" alt="Лого Windows">
-          </a>
-        </li>
-      </ul>
-      <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <div class="download__wrapper">
+        <div class="download__wrapper-details">
+          <p class="download__title">Взгляните на жизнь иначе!</p>
+          <img class="download__image-mobile" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Телефон в руке">
+          <a class="download__button" href="https://www.apple.com/ru/ios/app-store" target="_blank" aria-label="Apple Store">Скачать приложение</a>
+          <ul class="download__list">
+            <li class="download__item">
+              <a class="download__link" href="https://www.apple.com/ru/ios/app-store" target="_blank" aria-label="Apple Store">
+                <img class="download__image" src="img/logo-apple.svg" width="46" height="57" alt="Лого Apple">
+              </a>
+            </li>
+            <li class="download__item">
+              <a class="download__link" href="https://play.google.com/store" target="_blank" aria-label="Play Market">
+                <img class="download__image" src="img/logo-android.svg" width="42" height="47" alt="Лого Android">
+              </a>
+            </li>
+            <li class="download__item">
+              <a class="download__link" href="https://www.microsoft.com/ru-ru/store/" target="_blank" aria-label="Windows Store">
+                <img class="download__image" src="img/logo-microsoft.svg" width="44" height="42" alt="Лого Windows">
+              </a>
+            </li>
+          </ul>
+          <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
+        <img class="download__image-tablet" src="img/iphone-hand-tablet@1x.png" width="700" height="545" alt="Телефон в руке">
+        <img class="download__image-desktop" src="img/iphone-hand-desktop@1x.png" width="1050" height="645" alt="Телефон в руке">
+      </div>
     </section>
     <section class="advantages">
       <header class="advantages__header">

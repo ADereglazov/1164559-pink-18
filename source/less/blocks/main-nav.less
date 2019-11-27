@@ -3,12 +3,11 @@
 }
 
 .main-nav__wrapper {
+  .container-mobile();
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  /*width: 100%;*/
   min-height: 69px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-top: 24px;
 }
 
@@ -25,11 +24,16 @@
   padding: 0;
   border: none;
   background-color: @blue-dark;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .main-nav__wrapper {
-    width: 100%;
+    .container-tablet();
+    /*width: 100%;*/
     min-height: 110px;
     padding-top: 43px;
   }
@@ -37,6 +41,7 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
+    .container-desktop();
     display: flex;
     justify-content: space-between;
     align-items: center;
