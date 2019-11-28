@@ -1,5 +1,12 @@
 .main-nav {
+  min-height: 325px;
   background-color: @blue-dark;
+}
+
+.main-nav__list {
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
 
 .main-nav__wrapper {
@@ -30,6 +37,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav {
+    min-height: 365px;
+  }
+
   .main-nav__wrapper {
     min-height: 110px;
     padding-top: 43px;
@@ -54,5 +65,9 @@
 
   .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav__list {
+    position: inherit;
   }
 }

@@ -1,9 +1,12 @@
 .page-header {
+  position: relative;
   background-color: @blue-dark;
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
     background-color: @black-opacity03;
+    margin-bottom: -110px;
+    z-index: 1;
   }
 }
