@@ -59,12 +59,6 @@
     align-items: center;
   }
 
-  .reviews__arrow-left,
-  .reviews__arrow-right {
-    display: block;
-    fill: @gray-lighter;
-  }
-
   .reviews__text {
     font-size: 18px;
   }
@@ -83,6 +77,16 @@
 
   .reviews__author-details {
     font-size: 18px;
+  }
+
+  .reviews__arrow-left,
+  .reviews__arrow-right {
+    display: block;
+    fill: @gray-lighter;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .reviews__text {
