@@ -1,11 +1,18 @@
+.prices {
+  height: 470px;
+}
+
 .prices__table {
+  table-layout: fixed;
   line-height: 30px;
   text-transform: uppercase;
+  padding-top: 90px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .prices__head {
+  min-width: 275px;
   text-align: center;
   color: @white;
   background-color: @blue-dark;
@@ -24,8 +31,13 @@
 .prices__row {
   font-size: 14px;
   font-weight: 400;
+  height: 60px;
   color: @blue-dark;
   background-color: @white;
+}
+
+.prices__row:first-child {
+  height: 95px;
 }
 
 @media (min-width: @tablet-width) {
@@ -34,9 +46,8 @@
   }
 
   .prices__table {
-    width: 100%;
-    table-layout: fixed;
-    padding-top: 90px;
+    width: @tablet-width;
+    padding: 90px 20px 0 20px;
   }
 
   .prices__name {
@@ -49,7 +60,6 @@
   }
 
   .prices__row {
-    font-size: 14px;
     height: 45px;
   }
 
@@ -81,7 +91,8 @@
   }
 
   .prices__table {
-    padding-top: 150px;
+    width: @desktop-width;
+    padding: 150px 10px 0 10px;
   }
 
   .prices__name {
