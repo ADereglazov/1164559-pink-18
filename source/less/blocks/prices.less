@@ -27,3 +27,82 @@
   color: @blue-dark;
   background-color: @white;
 }
+
+@media (min-width: @tablet-width) {
+  .prices {
+    height: 375px;
+  }
+
+  .prices__table {
+    width: 100%;
+    table-layout: fixed;
+    padding-top: 90px;
+  }
+
+  .prices__name {
+    font-size: 16px;
+    padding: 0 35px;
+  }
+
+  .prices__price {
+    font-size: 18px;
+  }
+
+  .prices__row {
+    font-size: 14px;
+    height: 45px;
+  }
+
+  .prices__row:first-child {
+    height: 75px;
+  }
+
+  .prices__data {
+    text-transform: none;
+    padding-left: 20px;
+  }
+
+  .prices__data:nth-child(n + 2) {
+    text-align: center;
+  }
+
+  .prices__head:first-child {
+    background-color: @gray-light;
+  }
+
+  .prices__wrapper .prices__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .prices {
+    height: 525px;
+  }
+
+  .prices__table {
+    padding-top: 150px;
+  }
+
+  .prices__name {
+    font-size: 18px;
+    padding: 0 66px;
+  }
+
+  .prices__price {
+    font-size: 24px;
+  }
+
+  .prices__row {
+    font-size: 18px;
+    height: 60px;
+  }
+
+  .prices__row:first-child {
+    height: 95px;
+  }
+
+  .prices__data {
+    padding-left: 25px;
+  }
+}
