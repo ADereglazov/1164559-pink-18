@@ -1,0 +1,38 @@
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 56px;
+  margin: 0 auto;
+}
+
+.slider__toggle {
+  display: block;
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: 3px solid @blue-dark-opacity03;
+  border-radius: 50%;
+
+  &:hover {
+    cursor: pointer;
+    border-color: @blue-dark-opacity06;
+  }
+
+  &:active {
+    outline: none;
+    border-color: @blue-dark-opacity01;
+  }
+
+  &--current {
+    width: 12px;
+    height: 12px;
+    border: 3px solid @blue-dark;
+    background-color: transparent;
+
+    &:hover {
+      cursor: default;
+      border-color: @blue-dark;
+    }
+  }
+}
