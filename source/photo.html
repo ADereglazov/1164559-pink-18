@@ -212,15 +212,28 @@
     </section>
     <section class="photoeditor">
       <h2 class="visually-hidden">Редактор фото для загрузки на сайт</h2>
-      <p class="photoeditor__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <header class="photoeditor__header">
+        <div class="photoeditor__wrapper container">
+          <p class="photoeditor__title">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+      </header>
+      <div class="photoeditor__separator"></div>
+      <form class="photoeditor__form container" action="https://echo.htmlacademy.ru" method="post">
         <img class="photoeditor__photo" src="img/photo-road-mobile@1x.jpg"  width="280" height="374" alt="Редактируемое фото">
         <div class="photoeditor__tools">
-          <button class="photoeditor__button-tool photoeditor__button--cut photoeditor__button--current" type="button">1</button>
-          <button class="photoeditor__button-tool photoeditor__button--fill" type="button">2</button>
-          <button class="photoeditor__button-tool photoeditor__button--contrast" type="button">3</button>
-          <input class="photoeditor__range" type="range" id="range1" min="1" max="100" value="80">
-          <label class="photoeditor__label" for="range1"></label>
+          <div class="photoeditor__wrapper-buttons">
+            <button class="photoeditor__button-tool photoeditor__button--cut photoeditor__button--current" type="button">1</button>
+            <button class="photoeditor__button-tool photoeditor__button--fill" type="button">2</button>
+            <button class="photoeditor__button-tool photoeditor__button--contrast" type="button">3</button>
+          </div>
+          <div class="photoeditor__wrapper-inputs">
+            <input class="photoeditor__range" type="range" id="range1" min="1" max="100" value="80">
+            <input class="photoeditor__range" type="range" id="range2" min="1" max="100" value="20">
+            <input class="photoeditor__range" type="range" id="range3" min="1" max="100" value="50">
+            <label class="photoeditor__label" for="range1"></label>
+            <label class="photoeditor__label" for="range2"></label>
+            <label class="photoeditor__label" for="range3"></label>
+          </div>
         </div>
         <button class="photoeditor__button" type="submit">Запостить</button>
         <button class="photoeditor__button photoeditor__button--reset" type="reset">Отмена</button>
