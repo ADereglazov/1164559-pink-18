@@ -3,13 +3,70 @@
 }
 
 .gallery__title {
+  min-height: 185px;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
+  padding: 55px 15px 20px 15px;
+  margin: 0;
   color: @blue-dark;
 }
 
-.gallery__wrapper {
+.gallery__list-comments {
   .list-reset();
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery__users-comment + .gallery__users-comment {
+  margin-top: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__title {
+    min-height: 230px;
+    font-size: 18px;
+    padding: 100px 90px 20px 90px;
+  }
+
+  .gallery__list-comments {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .gallery__users-comment:first-child {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .gallery__users-comment:nth-child(2n+3) {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__title {
+    min-height: 240px;
+    font-size: 18px;
+    padding: 100px 180px 20px 180px;
+  }
+
+  .gallery__users-comment + .gallery__users-comment,
+  .gallery__users-comment:nth-child(2n+3) {
+    margin-left: 0;
+  }
+
+  .gallery__users-comment:first-child {
+    margin-bottom: 50px;
+  }
+
+  .gallery__users-comment:nth-child(n+5) {
+    margin-top: 54px;
+  }
+
+  .gallery__users-comment:nth-child(3n+3) {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 }
