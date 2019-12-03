@@ -50,6 +50,7 @@
 .form__fieldset {
   padding: 0;
   border: 0;
+  margin: 0;
 }
 
 .form__text-label {
@@ -208,5 +209,66 @@
   .form__button,
   .form__note {
     margin-top: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__title {
+    width: 755px;
+    min-height: 200px;
+
+    &--hide {
+      display: inline-block;
+    }
+  }
+
+  .form__form {
+    position: relative;
+  }
+
+  .form__fieldset {
+    &--notbordered {
+      width: 435px;
+    }
+  }
+
+  .form__legend {
+    padding: 0 25px;
+  }
+
+  .form__wrapper {
+    &:nth-child(4) {
+      position: absolute;
+      width: 435px;
+      top: 15px;
+      right: 10px;
+    }
+
+    &:nth-child(4) .form__wrapper-container {
+      width: 435px;
+      padding: 0;
+    }
+  }
+
+  .form__wrapper-elements {
+    &--reverse {
+      float: left;
+      width: 370px;
+    }
+
+    &--reverse + &--reverse {
+      margin-left: 74px;
+    }
+  }
+
+  .form__description-text {
+    width: 810px;
+    height: 125px;
+  }
+
+  .form__note {
+    &--hide {
+      display: inline-block;
+    }
   }
 }
