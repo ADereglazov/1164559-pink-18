@@ -222,10 +222,10 @@
     }
   }
 
-/*
   .form__form {
-    flex-direction: row;
-    flex-wrap: wrap;
+    position: relative;
+    width: @desktop-width;
+    margin: 0 auto;
   }
 
   .form__fieldset {
@@ -235,10 +235,11 @@
   }
 
   .form__wrapper {
-    &:nth-child(4),
-    &:nth-child(1) {
+    &:nth-child(4) {
+      position: absolute;
       width: 435px;
-      margin: 0 auto;
+      top: 15px;
+      right: 10px;
     }
 
     &:nth-child(4) .form__wrapper-container {
@@ -246,7 +247,6 @@
       padding: 0;
     }
   }
-*/
 
   .form__wrapper-elements {
     &--reverse {
