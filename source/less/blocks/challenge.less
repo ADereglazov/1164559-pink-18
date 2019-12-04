@@ -1,7 +1,49 @@
+.challenge {
+  min-height: 462px;
+  margin-bottom: -185px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 462px;
+  background-color: @blue-darken;
+}
+
 .challenge__text {
   font-size: 24px;
   font-weight: 300;
+  line-height: normal;
   text-align: center;
+  padding-top: 100px;
+  padding-bottom: 195px;
+  margin: 0 auto;
   color: @white;
-  background-color: @blue-darken;
+}
+
+@media (min-width: @tablet-width) {
+  .challenge {
+    min-height: 730px;
+    margin-bottom: -290px;
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat @blue-darken;
+  }
+
+  .challenge__text {
+    font-size: 50px;
+    width: 480px;
+    padding-top: 190px;
+    padding-bottom: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .challenge {
+    min-height: 853px;
+    margin-bottom: -458px;
+    background: url("../img/bg-back-desktop@1x.jpg") no-repeat @blue-darken;
+  }
+
+  .challenge__text {
+    width: 750px;
+    padding-top: 185px;
+    padding-bottom: 470px;
+  }
 }
