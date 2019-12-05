@@ -79,7 +79,8 @@
 
 @media (min-width: @tablet-width) {
   .download {
-    background: url("../img/bg-back-tablet@1x.jpg") no-repeat @blue-darken;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: 100% 729px;
   }
 
   .download__container {
@@ -89,12 +90,22 @@
 
   .download__wrapper {
     width: 300px;
-    padding-top: 213px;
-    padding-bottom: 110px;
+    min-height: 729px;
+    padding-top: 202px;
   }
 
   .download__title {
     font-size: 40px;
+    line-height: 49px;
+    padding-right: 28px;
+    padding-left: 30px;
+    margin-bottom: 31px;
+  }
+
+  .download__button {
+    width: 300px;
+    margin-top: 0;
+    margin-bottom: 45px;
   }
 
   .download__image-main {
@@ -107,12 +118,13 @@
 
   .download__text {
     font-size: 18px;
+    margin-top: 28px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .download {
-    background: url("../img/bg-back-desktop@1x.jpg") no-repeat @blue-darken;
+    background: url("../img/bg-back-desktop@1x.jpg");
   }
 
   .download__wrapper {
