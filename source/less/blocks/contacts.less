@@ -29,7 +29,6 @@
 .contacts__info {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-between;
   min-height: 245px;
   margin-top: 30px;
@@ -57,17 +56,23 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    min-height: 405px;
+  }
+
   .contacts__title {
     font-size: 40px;
-    line-height: normal;
+    line-height: 50px;
     width: 370px;
     margin: 0 auto;
   }
 
   .contacts__info {
     flex-direction: row;
-    align-items: flex-end;
-    min-height: 185px;
+    flex-wrap: wrap;
+    align-content: space-between;
+    min-height: 195px;
+    margin: 40px 28px 0 26px;
   }
 
   .contacts__info div {
@@ -75,11 +80,10 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 245px;
-    min-height: 80px;
   }
 
   .contacts__info-title {
-    margin-bottom: 15px;
+    margin-bottom: 0;
   }
 
   .contacts__welcome-info {
