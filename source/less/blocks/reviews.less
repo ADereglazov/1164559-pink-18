@@ -89,10 +89,25 @@
 }
 
 @media (min-width: @desktop-width) {
+  .reviews {
+    min-height: 420px;
+    padding: 0;
+  }
+
+  .reviews__wrapper {
+    padding-top: 68px;
+    padding-bottom: 20px;
+  }
+
   .reviews__quotes-image {
     display: inherit;
     margin: 0 auto;
     fill: @gray-lighter;
+  }
+
+  .reviews__list {
+    margin-top: 52px;
+    margin-bottom: 0;
   }
 
   .reviews__author-name {
@@ -101,6 +116,10 @@
 
   .reviews__author-details {
     font-size: 18px;
+  }
+
+  .reviews__text-desktop {
+    margin-bottom: 36px;
   }
 
   .reviews__arrow-left,
