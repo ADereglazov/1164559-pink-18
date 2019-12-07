@@ -31,10 +31,10 @@
     font-size: 96px;
     font-weight: 700;
     text-align: center;
-    line-height: normal;
+    line-height: 96px;
     width: 202px;
     height: 202px;
-    padding-top: 15px;
+    padding-top: 32px;
     border: 15px solid @pink;
     border-radius: 50%;
     color: @pink;
@@ -68,6 +68,10 @@
     margin-bottom: 10px;
   }
 
+  .effect__header-desktop-space {
+    display: none;
+  }
+
   .effect__header-tablet-space {
     display: inline-block;
   }
@@ -79,7 +83,12 @@
 
 @media (min-width: @desktop-width) {
   .effect {
+    min-height: 475px;
     background-color: @gray-light;
+  }
+
+  .effect__wrapper {
+    padding-top: 65px;
   }
 
   .effect__timer-image {
@@ -91,10 +100,10 @@
   .effect__twenty-four {
     position: absolute;
     font-size: 120px;
-    line-height: normal;
+    line-height: 120px;
     width: 253px;
     height: 253px;
-    padding-top: 25px;
+    padding-top: 42px;
     border: 17px solid @pink;
     border-radius: 50%;
     color: @pink;
@@ -105,7 +114,10 @@
   }
 
   .effect__text-wrapper {
-    width: 525px;
+    width: 540px;
+    padding-top: 42px;
+    padding-right: 0;
+    margin-right: 33px;
   }
 
   .effect__header {
@@ -118,6 +130,15 @@
   .effect__link {
     font-size: 18px;
     line-height: 30px;
+  }
+
+  .effect__text {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+
+  .effect__header-desktop-space {
+    display: inline-block;
   }
 
   .effect__header-tablet-space {
