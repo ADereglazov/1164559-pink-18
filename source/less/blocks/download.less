@@ -77,7 +77,7 @@
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
-  margin-top: 17px;
+  margin-top: 24px;
   margin-bottom: 0;
 }
 
@@ -103,7 +103,7 @@
     line-height: 49px;
     padding-right: 28px;
     padding-left: 30px;
-    margin-bottom: 31px;
+    margin-bottom: 30px;
   }
 
   .download__button {
@@ -120,21 +120,25 @@
     z-index: -1;
   }
 
+  .download__item:nth-child(2) {
+    align-self: center;
+  }
+
   .download__text {
     font-size: 18px;
-    margin-top: 28px;
+    margin-top: 36px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .download {
     background: url("../img/bg-back-desktop@1x.jpg");
+    background-size: 100% 853px;
   }
 
   .download__wrapper {
     min-height: 853px;
     padding-top: 220px;
-    padding-bottom: 124px;
   }
 
   .download__title {
