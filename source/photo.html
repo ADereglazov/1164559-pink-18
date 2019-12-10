@@ -50,7 +50,7 @@
               <img class="comment__photo comment__photo--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Панорама дня">
             </a>
             <span class="comment__panorama-label">Панорама дня</span>
-            <div class="comment__wrapper">
+            <div class="comment__wrapper comment__wrapper--first">
               <div class="comment__user">
                 <b class="comment__username">Анна</b>
                 <span class="comment__time">(5 минут назад)</span>
@@ -218,28 +218,30 @@
         </div>
       </header>
       <div class="photoeditor__separator"></div>
-      <form class="photoeditor__form container" action="https://echo.htmlacademy.ru" method="post">
-        <img class="photoeditor__photo" src="img/photo-road-mobile@1x.jpg"  width="280" height="374" alt="Редактируемое фото">
-        <div class="photoeditor__tools">
-          <div class="photoeditor__wrapper-buttons-tools">
-            <button class="photoeditor__button-tool photoeditor__button--cut photoeditor__button--current" type="button">1</button>
-            <button class="photoeditor__button-tool photoeditor__button--fill" type="button">2</button>
-            <button class="photoeditor__button-tool photoeditor__button--contrast" type="button">3</button>
+      <div class="photoeditor__wrapper container">
+        <form class="photoeditor__form" action="https://echo.htmlacademy.ru" method="post">
+          <img class="photoeditor__photo" src="img/photo-road-mobile@1x.jpg"  width="280" height="374" alt="Редактируемое фото">
+          <div class="photoeditor__tools">
+            <div class="photoeditor__wrapper-buttons-tools">
+              <button class="photoeditor__button-tool photoeditor__button--cut photoeditor__button--current" type="button">1</button>
+              <button class="photoeditor__button-tool photoeditor__button--fill" type="button">2</button>
+              <button class="photoeditor__button-tool photoeditor__button--contrast" type="button">3</button>
+            </div>
+            <div class="photoeditor__wrapper-inputs">
+              <input class="photoeditor__range" type="range" id="range1" min="1" max="100" value="80">
+              <label class="photoeditor__label" for="range1"></label>
+              <input class="photoeditor__range" type="range" id="range2" min="1" max="100" value="20">
+              <label class="photoeditor__label" for="range2"></label>
+              <input class="photoeditor__range" type="range" id="range3" min="1" max="100" value="50">
+              <label class="photoeditor__label" for="range3"></label>
+            </div>
+            <div class="photoeditor__buttons">
+              <button class="photoeditor__button" type="submit">Запостить</button>
+              <button class="photoeditor__button photoeditor__button--reset" type="reset">Отмена</button>
+            </div>
           </div>
-          <div class="photoeditor__wrapper-inputs">
-            <input class="photoeditor__range" type="range" id="range1" min="1" max="100" value="80">
-            <label class="photoeditor__label" for="range1"></label>
-            <input class="photoeditor__range" type="range" id="range2" min="1" max="100" value="20">
-            <label class="photoeditor__label" for="range2"></label>
-            <input class="photoeditor__range" type="range" id="range3" min="1" max="100" value="50">
-            <label class="photoeditor__label" for="range3"></label>
-          </div>
-          <div class="photoeditor__buttons">
-            <button class="photoeditor__button" type="submit">Запостить</button>
-            <button class="photoeditor__button photoeditor__button--reset" type="reset">Отмена</button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </section>
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
