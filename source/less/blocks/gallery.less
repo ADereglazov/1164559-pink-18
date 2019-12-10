@@ -39,13 +39,13 @@
     flex-wrap: wrap;
   }
 
+  .gallery__users-comment + .gallery__users-comment {
+    margin-top: 0;
+  }
+
   .gallery__users-comment:first-child {
     width: 100%;
     margin-bottom: 50px;
-  }
-
-  .gallery__users-comment + .gallery__users-comment {
-    margin-top: 0;
   }
 
   .gallery__users-comment:nth-child(n+4) {
@@ -62,6 +62,10 @@
     min-height: 240px;
     font-size: 18px;
     padding: 91px 180px 20px 180px;
+  }
+
+  .gallery__users-comment:nth-child(n+4) {
+    margin-top: 0;
   }
 
   .gallery__users-comment:nth-child(2n+3) {
