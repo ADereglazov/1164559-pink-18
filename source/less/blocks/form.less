@@ -55,15 +55,6 @@
 .form__wrapper-elements {
   display: flex;
   flex-direction: column;
-
-  &--checkbox {
-    flex-direction: row;
-    margin-top: 43px;
-  }
-
-  &--checkbox:first-child {
-    margin-top: 40px;
-  }
 }
 
 .form__fieldset {
@@ -74,6 +65,32 @@
 
 .form__progress-label {
   position: relative;
+  font-size: 18px;
+  line-height: 30px;
+
+  &:hover {
+    //cursor: pointer;
+  }
+}
+
+.form__progress-label:first-child {
+  margin-top: 39px;
+}
+
+.form__progress-label + .form__progress-label {
+  margin-top: 43px;
+}
+
+.form__progress-text {
+  position: absolute;
+  left: 70px;
+  bottom: 5px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.form__progress-box {
+  position: relative;
   display: block;
   width: 39px;
   height: 39px;
@@ -82,18 +99,17 @@
   background-color: @white;
 }
 
-.form__progress-input:not(:disabled) + .form__progress-label {
-  &:hover {
-    cursor: pointer;
+.form__progress-input:not(:disabled) {
+  &:hover + .form__progress-box {
     border-color: @blue-dark;
   }
 
-  &:active {
+  &:active + .form__progress-box {
     border-color: @pink;
   }
 }
 
-.form__progress-input:checked + .form__progress-label {
+.form__progress-input:checked + .form__progress-box {
   &::before {
     content: "";
     position: absolute;
@@ -115,12 +131,6 @@
     background: @pink;
     transform: rotate(-45deg);
   }
-}
-
-.form__progress-text {
-  font-size: 18px;
-  line-height: 38px;
-  margin-left: 31px;
 }
 
 .form__text-label {
