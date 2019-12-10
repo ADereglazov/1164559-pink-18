@@ -1,27 +1,35 @@
 .comment {
-  position: relative;
   text-align: left;
   background-color: @gray-light;
 }
 
+.comment__photo {
+  display: block;
+
+  &--panorama {
+    position: absolute;
+    left: 0;
+  }
+}
+
 .comment__panorama-label {
   display: block;
+  position: relative;
   width: 140px;
   height: 36px;
-  position: absolute;
-  top: 0;
-  right: 0;
   font-size: 12px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   padding-top: 6px;
+  margin-bottom: 101px;
+  margin-left: auto;
   color: @white;
   background-color: @pink;
 }
 
 .comment__wrapper {
-  padding: 25px 15px;
+  padding: 17px 17px;
 }
 
 .comment__username {
@@ -60,6 +68,7 @@
 .comment__button {
   padding: 0;
   border: none;
+  margin-right: 15px;
   background-color: transparent;
 }
 
