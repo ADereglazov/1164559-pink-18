@@ -4,12 +4,11 @@
 
 .form__title {
   width: 280px;
-  min-height: 185px;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
-  padding-top: 55px;
+  padding-top: 45px;
   padding-bottom: 20px;
   margin: 0 auto;
   color: @blue-dark;
@@ -39,28 +38,40 @@
   }
 }
 
-.form__wrapper-container {
-  &--checkboxes {
-    padding-top: 38px;
-    padding-bottom: 44px;
-  }
-}
-
 .form__wrapper {
+  padding-top: 38px;
+  padding-bottom: 44px;
+
   &--gray {
     background-color: @gray-light;
+  }
+
+  &:first-child {
+    padding-top: 15px;
+  }
+
+  &:last-child {
+    padding-bottom: 17px;
   }
 }
 
 .form__wrapper-elements {
   display: flex;
   flex-direction: column;
+
+  &--reverse + &--reverse {
+    margin-top: 20px;
+  }
 }
 
 .form__fieldset {
   padding: 0;
   border: 0;
   margin: 0;
+
+  &--notbordered div + div {
+    margin-top: 20px;
+  }
 }
 
 .form__progress-label {
@@ -120,11 +131,11 @@
 
 .form__progress-input:checked:disabled + .form__progress-label {
   &::before {
-    background: @gray-lighter;
+    background-color: @gray-lighter;
   }
 
   &::after {
-    background: @gray-lighter;
+    background-color: @gray-lighter;
   }
 }
 
@@ -132,8 +143,46 @@
   margin-top: 43px;
 }
 
+.form__radio-label {
+  position: relative;
+  display: block;
+  width: 37px;
+  height: 37px;
+  margin-top: 37px;
+  border: 11px solid @white;
+  border-radius: 50%;
+  background-color: @white;
+  box-shadow: 0 0 0 2px @gray-lighter;
+}
+
+.form__radio-text {
+  position: absolute;
+  left: 29px;
+  top: -10px;
+  width: 240px;
+  font-size: 18px;
+  line-height: 35px;
+  padding-left: 29px;
+}
+
+.form__radio-field:checked + .form__radio-label {
+  background-color: @pink;
+}
+
+.form__radio-field:not(:disabled) + .form__radio-label {
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 2px @black;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 2px @pink;
+  }
+}
+
 .form__text-label {
   padding-left: 23px;
+  margin-bottom: 5px;
 }
 
 .form__text-field {
@@ -144,13 +193,14 @@
 .form__text-field::placeholder,
 .form__description-text::placeholder {
   font-size: 18px;
+  line-height: 30px;
   color: @blue-dark;
 }
 
 .form__button {
   display: block;
-  width: 276px;
-  height: 59px;
+  width: 280px;
+  height: 62px;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
@@ -177,7 +227,9 @@
 .form__note {
   font-size: 14px;
   font-weight: 400;
+  text-align: center;
   text-transform: uppercase;
+  margin-top: 40px;
   color: @blue-dark;
 
   sup {
@@ -193,7 +245,9 @@
   resize: none;
   width: 100%;
   height: 200px;
-  padding: 20px;
+  padding: 15px 20px;
+  margin-top: 17px;
+  margin-bottom: 42px;
 }
 
 @media (min-width: @tablet-width) {
@@ -311,6 +365,11 @@
     &--notbordered {
       width: 435px;
     }
+
+    &--radio {
+      height: 312px;
+      padding: 55px 20px;
+    }
   }
 
   .form__wrapper {
@@ -325,11 +384,6 @@
       width: 435px;
       padding: 0;
     }
-  }
-
-  .form__fieldset--radio {
-    height: 312px;
-    padding: 55px 20px;
   }
 
   .form__wrapper-elements {
