@@ -36,10 +36,18 @@
   &--hide {
     display: none;
   }
+
+  &--checkboxes {
+    margin-bottom: 39px;
+  }
+
+  &--radiobuttons {
+    margin-bottom: 37px;
+  }
 }
 
 .form__wrapper {
-  padding-top: 38px;
+  padding-top: 39px;
   padding-bottom: 44px;
 
   &--gray {
@@ -80,41 +88,54 @@
 
 .form__progress-label {
   position: relative;
-  display: block;
-  width: 39px;
-  height: 39px;
-  border: 2px solid @gray-lighter;
-  border-radius: 2px;
-  background-color: @white;
-  margin-top: 39px;
+  margin-bottom: 43px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 39px;
+    height: 39px;
+    border: 2px solid @gray-lighter;
+    border-radius: 2px;
+    background-color: @white;
+  }
 }
 
+.form__radio-text,
 .form__progress-text {
-  position: absolute;
-  left: 40px;
-  width: 238px;
   font-size: 18px;
-  line-height: 35px;
-  padding-left: 28px;
+  line-height: 30px;
+  vertical-align: middle;
+  padding-left: 27px;
 }
 
 .form__progress-input:not(:disabled) + .form__progress-label {
   &:hover {
     cursor: pointer;
-    border-color: @blue-dark;
+
+    &::before {
+      border-color: @blue-dark;
+    }
   }
 
   &:active {
-    border-color: @pink;
+    &::before {
+      border-color: @pink;
+    }
   }
 }
 
-.form__progress-input:checked + .form__progress-label {
+.form__progress-input:checked + .form__progress-label .form__progress-text {
   &::before {
     content: "";
     position: absolute;
-    bottom: 13px;
-    left: 6px;
+    bottom: 15px;
+    left: 8px;
     width: 10px;
     height: 2px;
     background: @pink;
@@ -124,8 +145,8 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 17px;
-    left: 10px;
+    bottom: 19px;
+    left: 12px;
     width: 22px;
     height: 2px;
     background: @pink;
@@ -133,7 +154,7 @@
   }
 }
 
-.form__progress-input:checked:disabled + .form__progress-label {
+.form__progress-input:checked:disabled + .form__progress-label .form__progress-text {
   &::before {
     background-color: @gray-lighter;
   }
@@ -143,44 +164,45 @@
   }
 }
 
-.form__progress-label ~ .form__progress-label {
-  margin-top: 43px;
-}
-
 .form__radio-label {
-  position: relative;
-  display: block;
-  width: 37px;
-  height: 37px;
-  margin-top: 37px;
-  border: 11px solid @white;
-  border-radius: 50%;
-  background-color: @white;
-  box-shadow: 0 0 0 2px @gray-lighter;
-}
+  margin-bottom: 36px;
 
-.form__radio-text {
-  position: absolute;
-  left: 29px;
-  top: -10px;
-  width: 240px;
-  font-size: 18px;
-  line-height: 35px;
-  padding-left: 29px;
+  &:last-child {
+    margin: 0;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 37px;
+    height: 37px;
+    border: 11px solid @white;
+    border-radius: 50%;
+    background-color: @white;
+    box-shadow: 0 0 0 2px @gray-lighter;
+  }
 }
 
 .form__radio-field:checked + .form__radio-label {
-  background-color: @pink;
+  &::before {
+    background-color: @pink;
+  }
 }
 
 .form__radio-field:not(:disabled) + .form__radio-label {
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0 0 2px @black;
+
+    &::before {
+      box-shadow: 0 0 0 2px @black;
+    }
   }
 
   &:active {
-    box-shadow: 0 0 0 2px @pink;
+    &::before {
+      box-shadow: 0 0 0 2px @pink;
+    }
   }
 }
 
@@ -277,9 +299,8 @@
 @media (min-width: @tablet-width) {
   .form__title {
     width: 490px;
-    min-height: 180px;
     font-size: 18px;
-    padding-top: 100px;
+    padding-top: 91px;
 
     &--hide {
       display: inherit;
@@ -292,7 +313,7 @@
   }
 
   .form__fieldset {
-    padding: 47px 60px;
+    padding: 54px 60px;
     border: 2px solid @gray-light;
 
     &--notbordered {
@@ -316,8 +337,15 @@
   }
 
   .form__wrapper {
+    padding-top: 0;
+
     &--gray {
       background-color: @white;
+    }
+
+    &:first-child {
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     &:nth-child(2) {
@@ -345,8 +373,9 @@
     }
 
     &--row label {
-      padding-right: 22px;
+      padding-right: 19px;
       padding-left: 0;
+      margin-bottom: 0;
     }
 
     &--row input {
@@ -356,6 +385,18 @@
     &--reverse {
       flex-direction: column-reverse;
     }
+  }
+
+  .form__radio-label {
+    margin-top: 0;
+
+    & ~ .form__radio-label {
+      margin-top: 37px;
+    }
+  }
+
+  .form__radio-text {
+    padding-left: 19px;
   }
 
   .form__description-text {
