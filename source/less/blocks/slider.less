@@ -36,3 +36,51 @@
     }
   }
 }
+
+.slider__button-left,
+.slider__button-right {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .slider {
+    position: relative;
+  }
+
+  .slider__button-left,
+  .slider__button-right {
+    position: absolute;
+    top: 54%;
+    display: block;
+    width: 22px;
+    height: 41px;
+    padding: 0;
+    border: none;
+    background-color: @white;
+
+    &:hover {
+      cursor: pointer;
+
+      & .slider__arrow-left,
+      & .slider__arrow-right {
+        fill: @blue-dark-opacity06;
+      }
+    }
+
+    &:active {
+      & .slider__arrow-left,
+      & .slider__arrow-right {
+        fill: @blue-dark-opacity01;
+      }
+    }
+  }
+
+  .slider__button-right {
+    right: 10px;
+  }
+
+  .slider__arrow-left,
+  .slider__arrow-right {
+    fill: @gray-lighter;
+  }
+}
