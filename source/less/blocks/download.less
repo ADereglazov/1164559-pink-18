@@ -1,8 +1,8 @@
 .download {
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-image: linear-gradient(to bottom, transparent 63%, @blue-darken 63%), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 100% 462px;
+  background-size: contain;
   background-color: @blue-darken;
   color: @white;
 }
@@ -84,7 +84,8 @@
 @media (min-width: @tablet-width) {
   .download {
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-size: 100% 729px;
+    background-position: center;
+    background-size: cover;
   }
 
   .download__container {
@@ -133,7 +134,6 @@
 @media (min-width: @desktop-width) {
   .download {
     background: url("../img/bg-back-desktop@1x.jpg");
-    background-size: 100% 853px;
   }
 
   .download__wrapper {
