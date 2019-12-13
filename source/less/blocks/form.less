@@ -343,6 +343,10 @@
       display: table;
       margin-bottom: 38px;
     }
+
+    &--checkboxes {
+      margin-bottom: 42px;
+    }
   }
 
   .form__wrapper {
@@ -353,13 +357,13 @@
       background-color: @white;
     }
 
+    & + .form__wrapper {
+      margin-top: 59px;
+    }
+
     &:first-child {
       padding-top: 0;
       padding-bottom: 0;
-    }
-
-    & + .form__wrapper {
-      margin-top: 59px;
     }
 
     &:nth-child(2) {
@@ -377,6 +381,10 @@
 
     &:nth-child(5) {
       order: 5;
+    }
+
+    &:last-child {
+      padding-bottom: 50px;
     }
   }
 
@@ -406,9 +414,18 @@
     }
   }
 
-  .form__radio-text,
-  .form__progress-text {
+  .form__radio-text {
     padding-left: 18px;
+  }
+
+  .form__progress-label {
+    &:last-child {
+      margin-bottom: 47px;
+    }
+  }
+
+  .form__progress-text {
+    padding-left: 15px;
   }
 
   .form__text-label {
@@ -419,11 +436,17 @@
   .form__description-text {
     width: 495px;
     height: 190px;
+    margin-top: 35px;
+    margin-bottom: 47px;
+  }
+
+  .form__button {
+    width: 300px;
   }
 
   .form__button,
   .form__note {
-    margin-top: 70px;
+    margin-top: 68px;
   }
 }
 
