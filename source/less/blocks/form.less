@@ -42,7 +42,7 @@
   }
 
   &--radiobuttons {
-    margin-bottom: 37px;
+    margin-bottom: 35px;
   }
 }
 
@@ -111,7 +111,7 @@
   font-size: 18px;
   line-height: 30px;
   vertical-align: middle;
-  padding-left: 27px;
+  padding-left: 28px;
 }
 
 .form__progress-input:not(:disabled) + .form__progress-label {
@@ -165,7 +165,7 @@
 }
 
 .form__radio-label {
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 
   &:last-child {
     margin: 0;
@@ -282,7 +282,7 @@
   width: 100%;
   height: 200px;
   padding: 15px 20px;
-  margin-top: 17px;
+  margin-top: 14px;
   margin-bottom: 42px;
   border: 2px solid @gray-lighter;
   border-radius: 2px;
@@ -301,6 +301,7 @@
     width: 490px;
     font-size: 18px;
     padding-top: 91px;
+    margin-bottom: 53px;
 
     &--hide {
       display: inherit;
@@ -313,7 +314,8 @@
   }
 
   .form__fieldset {
-    padding: 54px 60px;
+    padding-right: 60px;
+    padding-left: 60px;
     border: 2px solid @gray-light;
 
     &--notbordered {
@@ -325,19 +327,27 @@
     &--notbordered div + div {
       margin-top: 55px;
     }
+
+    &--radio {
+      padding-top: 44px;
+      padding-bottom: 55px;
+    }
   }
 
   .form__legend {
     width: inherit;
     padding: 0 32px;
+    margin: 0;
 
     &--hide {
-      display: inherit;
+      display: table;
+      margin-bottom: 38px;
     }
   }
 
   .form__wrapper {
     padding-top: 0;
+    padding-bottom: 0;
 
     &--gray {
       background-color: @white;
@@ -348,11 +358,16 @@
       padding-bottom: 0;
     }
 
+    & + .form__wrapper {
+      margin-top: 59px;
+    }
+
     &:nth-child(2) {
       order: 4;
     }
 
     &:nth-child(3) {
+      padding-top: 0;
       order: 3;
     }
 
@@ -375,7 +390,6 @@
     &--row label {
       padding-right: 19px;
       padding-left: 0;
-      margin-bottom: 0;
     }
 
     &--row input {
@@ -385,18 +399,24 @@
     &--reverse {
       flex-direction: column-reverse;
     }
-  }
 
-  .form__radio-label {
-    margin-top: 0;
+    &--reverse + &--reverse {
+      margin-top: 30px;
+    }
 
-    & ~ .form__radio-label {
-      margin-top: 37px;
+    &--reverse input {
+      margin-bottom: 12px;
     }
   }
 
-  .form__radio-text {
-    padding-left: 19px;
+  .form__radio-text,
+  .form__progress-text {
+    padding-left: 18px;
+  }
+
+  .form__text-label {
+    padding-left: 17px;
+    margin-bottom: 0;
   }
 
   .form__description-text {
