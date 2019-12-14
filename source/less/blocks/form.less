@@ -130,6 +130,12 @@
   }
 }
 
+.form__progress-input:focus + .form__progress-label {
+  &::before {
+    border-color: @blue-dark;
+  }
+}
+
 .form__progress-input:checked + .form__progress-label .form__progress-text {
   &::before {
     content: "";
@@ -203,6 +209,12 @@
     &::before {
       box-shadow: 0 0 0 2px @pink;
     }
+  }
+}
+
+.form__radio-field:focus + .form__radio-label {
+  &::before {
+    box-shadow: 0 0 0 2px @black;
   }
 }
 
