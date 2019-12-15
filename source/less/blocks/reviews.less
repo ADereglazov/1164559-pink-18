@@ -1,6 +1,12 @@
 .reviews {
   text-align: center;
+  margin-top: -43px;
   background-color: @white;
+}
+
+.reviews__wrapper {
+  padding-top: 42px;
+  padding-bottom: 42px;
 }
 
 .reviews__quotes-image {
@@ -19,6 +25,7 @@
   font-style: normal;
   font-weight: bold;
   line-height: 30px;
+  margin-bottom: 14px;
   color: @black;
 }
 
@@ -26,21 +33,33 @@
   display: none;
 }
 
-.reviews__arrow-left,
-.reviews__arrow-right {
-  display: none;
-}
-
 .reviews__text {
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 14px;
   color: @blue-dark;
 }
 
+.reviews__list {
+  margin-bottom: 18px;
+}
+
 @media (min-width: @tablet-width) {
+  .reviews {
+    padding-top: 10px;
+    margin-top: 0;
+  }
+
+  .reviews__wrapper {
+    padding-top: 62px;
+    padding-bottom: 22px;
+  }
+
   .reviews__author-name {
     font-size: 20px;
+    margin-bottom: 0;
     order: 1;
   }
 
@@ -49,26 +68,40 @@
     vertical-align: middle;
     font-size: 14px;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 35px;
     order: 2;
-  }
-
-  .reviews__text-desktop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .reviews__text {
     font-size: 18px;
+    margin-bottom: 35px;
+  }
+
+  .reviews__list {
+    margin-bottom: 32px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .reviews {
+    min-height: 420px;
+    padding: 0;
+  }
+
+  .reviews__wrapper {
+    padding-top: 73px;
+    padding-bottom: 20px;
+  }
+
   .reviews__quotes-image {
     display: inherit;
-    margin: 0 auto;
+    margin: 0 auto 52px auto;
     fill: @gray-lighter;
+  }
+
+  .reviews__list {
+    width: 695px;
+    margin: 0 auto;
   }
 
   .reviews__author-name {
@@ -79,19 +112,8 @@
     font-size: 18px;
   }
 
-  .reviews__arrow-left,
-  .reviews__arrow-right {
-    display: block;
-    fill: @gray-lighter;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
   .reviews__text {
-    width: 695px;
-    margin: 0 auto;
+    margin-top: 0;
   }
 
   .reviews__toggles {

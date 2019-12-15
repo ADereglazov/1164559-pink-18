@@ -5,10 +5,11 @@
 
 .prices__table {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   table-layout: fixed;
   line-height: 30px;
-  padding-top: 90px;
+  padding-top: 89px;
   padding-bottom: 40px;
   margin: 0 auto;
 }
@@ -40,13 +41,13 @@
 .prices__row {
   font-size: 14px;
   font-weight: 400;
-  height: 60px;
+  height: 58px;
   color: @blue-dark;
   background-color: @white;
 }
 
 .prices__row:first-child {
-  height: 95px;
+  height: 98px;
 }
 
 .prices__data {
@@ -67,7 +68,7 @@
   .prices__table {
     display: table;
     width: @tablet-width;
-    padding: 90px 20px 0 20px;
+    padding: 88px 20px 0 20px;
     left: 0;
     transform: none;
   }
@@ -97,7 +98,7 @@
   .prices__data {
     text-align: left;
     padding-right: 0;
-    padding-left: 20px;
+    padding-left: 15px;
   }
 
   .prices__data:nth-child(n + 2) {
@@ -116,12 +117,12 @@
 
 @media (min-width: @desktop-width) {
   .prices {
-    min-height: 525px;
+    min-height: 515px;
   }
 
   .prices__table {
     width: @desktop-width;
-    padding: 150px 10px 0 10px;
+    padding: 140px 10px 0 10px;
   }
 
   .prices__name {
@@ -135,7 +136,7 @@
 
   .prices__row {
     font-size: 18px;
-    height: 60px;
+    height: 59px;
   }
 
   .prices__row:first-child {
@@ -143,6 +144,6 @@
   }
 
   .prices__data {
-    padding-left: 25px;
+    padding-left: 20px;
   }
 }

@@ -2,13 +2,17 @@
   background-color: @white;
 }
 
+.gallery__wrapper {
+  position: relative;
+}
+
 .gallery__title {
   min-height: 185px;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
-  padding: 55px 15px 20px 15px;
+  padding: 45px 15px 20px 15px;
   margin: 0;
   color: @blue-dark;
 }
@@ -20,14 +24,14 @@
 }
 
 .gallery__users-comment + .gallery__users-comment {
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 @media (min-width: @tablet-width) {
   .gallery__title {
-    min-height: 230px;
+    min-height: 228px;
     font-size: 18px;
-    padding: 100px 90px 20px 90px;
+    padding: 92px 90px 20px 90px;
   }
 
   .gallery__list-comments {
@@ -35,9 +39,17 @@
     flex-wrap: wrap;
   }
 
+  .gallery__users-comment + .gallery__users-comment {
+    margin-top: 0;
+  }
+
   .gallery__users-comment:first-child {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+  }
+
+  .gallery__users-comment:nth-child(n+4) {
+    margin-top: 20px;
   }
 
   .gallery__users-comment:nth-child(2n+3) {
@@ -49,10 +61,13 @@
   .gallery__title {
     min-height: 240px;
     font-size: 18px;
-    padding: 100px 180px 20px 180px;
+    padding: 91px 180px 20px 180px;
   }
 
-  .gallery__users-comment + .gallery__users-comment,
+  .gallery__users-comment:nth-child(n+4) {
+    margin-top: 0;
+  }
+
   .gallery__users-comment:nth-child(2n+3) {
     margin-left: 0;
   }

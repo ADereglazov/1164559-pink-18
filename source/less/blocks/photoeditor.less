@@ -1,5 +1,5 @@
 .photoeditor__header {
-  min-height: 195px;
+  min-height: 172px;
   background-color: @white;
 }
 
@@ -8,7 +8,7 @@
   font-weight: 400;
   line-height: 30px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 42px;
   margin: 0;
   color: @blue-dark;
 }
@@ -87,15 +87,28 @@
 .photoeditor__range {
   display: block;
   width: 280px;
+
+  &--hide {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .photoeditor__header {
+    min-height: 194px;
+  }
+
+  .photoeditor__title {
+    font-size: 18px;
+    padding-top: 65px;
+  }
+
   .photoeditor__form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     min-height: 510px;
-    padding-top: 55px;
+    padding-top: 57px;
   }
 
   .photoeditor__photo {
@@ -122,6 +135,10 @@
 
   .photoeditor__range {
     width: 200px;
+
+    &--hide {
+      display: block;
+    }
   }
 
   .photoeditor__wrapper-buttons-tools {
@@ -154,17 +171,25 @@
     background-color: @white;
   }
 
+  .photoeditor__header {
+    min-height: 185px;
+  }
+
+  .photoeditor__title {
+    padding-top: 58px;
+  }
+
   .photoeditor__form {
     background-color: @gray-light;
   }
 
   .photoeditor__photo {
-    margin-left: 70px;
+    margin-left: 80px;
   }
 
   .photoeditor__tools {
     width: 410px;
-    margin-right: 50px;
+    margin-right: 60px;
   }
 
   .photoeditor__buttons {
