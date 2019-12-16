@@ -12,16 +12,22 @@
   padding-top: 89px;
   padding-bottom: 40px;
   margin: 0 auto;
+  border-collapse: collapse;
 }
 
 .prices__head {
   min-width: 275px;
   text-align: center;
+  border: 2px solid @gray-light;
   color: @white;
   background-color: @blue-dark;
 }
 
-.prices__head:first-child,
+.prices__head:first-child {
+  display: none;
+  border: none;
+}
+
 .prices__data:first-child {
   display: none;
 }
@@ -53,6 +59,7 @@
 .prices__data {
   text-align: left;
   padding-right: 20px;
+  border: 2px solid @gray-lighter;
 }
 
 .prices__text-mobile {

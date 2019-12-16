@@ -12,8 +12,8 @@
 .main-nav__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   min-height: 72px;
-  padding-top: 24px;
   border-bottom: 1px solid transparent;
 }
 
@@ -36,6 +36,18 @@
   }
 }
 
+.main-nav__toggle-image {
+  fill: @white;
+
+  &:hover {
+    fill: @pink;
+  }
+
+  &:active {
+    fill: @pink-opacity03;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-nav {
     min-height: 365px;
@@ -43,7 +55,6 @@
 
   .main-nav__wrapper {
     min-height: 110px;
-    padding-top: 43px;
   }
 }
 
