@@ -85,22 +85,61 @@
 }
 
 .prices__data {
+  position: relative;
   text-align: left;
   padding-left: 20px;
   border: 2px solid @gray-lighter;
 
   &--yes {
-    background-image: url("../img/icon-yes.svg");
-    background-repeat: no-repeat;
-    background-position: 230px;
-    background-size: 31px 21px;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 22px;
+      right: 30px;
+      width: 14px;
+      height: 3px;
+      border-radius: 2px;
+      background: @green;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 27px;
+      right: 9px;
+      width: 29px;
+      height: 3px;
+      border-radius: 2px;
+      background: @green;
+      transform: rotate(-45deg);
+    }
   }
 
   &--no {
-    background-image: url("../img/icon-no.svg");
-    background-repeat: no-repeat;
-    background-position: 230px;
-    background-size: 27px 26px;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 28px;
+      right: 11px;
+      width: 36px;
+      height: 3px;
+      border-radius: 2px;
+      background: @orange;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 28px;
+      right: 11px;
+      width: 36px;
+      height: 3px;
+      border-radius: 2px;
+      background: @orange;
+      transform: rotate(-45deg);
+    }
   }
 }
 
@@ -127,6 +166,30 @@
   .prices__head:first-child {
     border: none;
     background-color: @gray-light;
+  }
+
+  .prices__data--yes {
+    &::before {
+      right: 80px;
+      bottom: 17px;
+    }
+
+    &::after {
+      right: 59px;
+      bottom: 22px;
+    }
+  }
+
+  .prices__data--no {
+    &::before {
+      right: 59px;
+      bottom: 24px;
+    }
+
+    &::after {
+      right: 59px;
+      bottom: 24px;
+    }
   }
 
   @media (max-width: @mobile-width-only) {
@@ -205,5 +268,29 @@
   .prices__hit {
     top: 11px;
     left: 11px;
+  }
+
+  .prices__data--yes {
+    &::before {
+      right: 119px;
+      bottom: 22px;
+    }
+
+    &::after {
+      right: 97px;
+      bottom: 26px;
+    }
+  }
+
+  .prices__data--no {
+    &::before {
+      right: 99px;
+      bottom: 25px;
+    }
+
+    &::after {
+      right: 99px;
+      bottom: 25px;
+    }
   }
 }
