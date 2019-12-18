@@ -1,49 +1,82 @@
-.main-nav {
-  min-height: 325px;
-  background-color: @blue-dark;
-}
+@media (max-width: @mobile-width-only) {
+  .main-nav__list {
+    background-color: @blue-dark;
+  }
 
-.main-nav__list {
-  position: absolute;
-  width: 100%;
-  left: 0;
-}
+  .main-nav__logo-link {
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    display: block;
+    width: 74px;
+    height: 23px;
+  }
 
-.main-nav__wrapper {
-  display: flex;
-  justify-content: space-between;
-  min-height: 72px;
-  padding-top: 24px;
-  border-bottom: 1px solid transparent;
-}
+  .main-nav__toggle {
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    display: block;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
 
-.main-nav__logo-link {
-  display: block;
-  width: 74px;
-  height: 23px;
-}
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
-.main-nav__toggle {
-  display: block;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  border: none;
-  background-color: @blue-dark;
+  .main-nav--opened {
+    & .main-nav__toggle {
+      width: 24px;
+    }
 
-  &:hover {
-    cursor: pointer;
+    & .main-nav__toggle-image--burger {
+      display: none;
+    }
+  }
+
+  .main-nav--closed {
+    & .main-nav__toggle {
+      width: 50px;
+    }
+
+    & .main-nav__toggle-image--cross {
+      display: none;
+    }
+
+    & .main-nav__list {
+      display: none;
+    }
+  }
+
+  .main-nav__toggle-image {
+    fill: @white;
+
+    &:hover {
+      fill: @pink;
+    }
+
+    &:active {
+      fill: @pink-opacity03;
+    }
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .main-nav {
-    min-height: 365px;
+  .main-nav__logo-link {
+    top: 45px;
+    width: 74px;
+    height: 23px;
   }
 
-  .main-nav__wrapper {
-    min-height: 110px;
-    padding-top: 43px;
+  .main-nav__toggle {
+    top: 45px;
   }
 }
 
@@ -53,22 +86,24 @@
     justify-content: space-between;
     align-items: center;
     min-height: 110px;
-    height: 100px;
+    width: @desktop-width;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
     background-color: transparent;
   }
 
-  .main-nav__wrapper {
-    display: block;
-    width: 150px;
-    min-height: auto;
-    padding: 0;
+  .main-nav__list {
+    background-color: transparent;
+  }
+
+  .main-nav__logo-link {
+    width: 74px;
+    height: 23px;
   }
 
   .main-nav__toggle {
     display: none;
-  }
-
-  .main-nav__list {
-    position: inherit;
   }
 }

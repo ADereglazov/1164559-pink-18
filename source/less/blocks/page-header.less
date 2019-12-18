@@ -1,18 +1,14 @@
 .page-header {
   position: relative;
+  min-height: 66px;
   margin-bottom: -66px;
-  background-color: @blue-dark;
+  background-color: @black-opacity03;
+  z-index: 1;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
+    min-height: 110px;
     margin-bottom: -110px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-header {
-    background-color: @black-opacity03;
-    z-index: 1;
   }
 }
