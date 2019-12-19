@@ -241,6 +241,11 @@
     outline: none;
     border-color: @black;
   }
+
+  ::-ms-clear {
+    width: 0; /* Убираем "крестики" в инпутах для IE */
+    height: 0;
+  }
 }
 
 .form__text-field::placeholder,
