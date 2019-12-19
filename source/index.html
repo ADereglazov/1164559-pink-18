@@ -60,7 +60,11 @@
       <div class="download__container container">
         <div class="download__wrapper">
           <p class="download__title">Взгляните на жизнь иначе!</p>
-          <img class="download__image-main" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Телефон в руке">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+            <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+            <img class="download__image-main" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="258" height="286" alt="Телефон в руке">
+          </picture>
           <a class="download__button" href="https://www.apple.com/ru/ios/app-store" target="_blank" aria-label="Apple Store">Скачать приложение</a>
           <ul class="download__list">
             <li class="download__item">
@@ -110,9 +114,19 @@
           </li>
         </ul>
         <div class="advantages__images">
-          <img class="advantages__image" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Iphone смайл">
-          <img class="advantages__image advantages__image--hide" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Iphone смайл">
-          <img class="advantages__image advantages__image--hide" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Iphone смайл">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
+            <img class="advantages__image advantages__image--hide" src="" alt="Iphone черно-белый">
+          </picture>
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
+            <img class="advantages__image advantages__image--hide" src="" alt="Iphone розовый">
+          </picture>
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+            <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+            <img class="advantages__image" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="Iphone смайл">
+          </picture>
         </div>
       </div>
     </section>
