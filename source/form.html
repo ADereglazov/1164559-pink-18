@@ -11,7 +11,11 @@
   <header class="page-header">
     <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
       <a class="main-nav__logo-link" href="index.html">
-        <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип PINK">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+          <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+          <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип PINK">
+        </picture>
       </a>
       <button class="main-nav__toggle" type="button" aria-label="Переключить меню">
         <svg class="main-nav__toggle-image main-nav__toggle-image--cross" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.867px" height="23.867px" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
@@ -161,7 +165,10 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <a class="page-footer__logo-link">
-          <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип PINK">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+            <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип PINK">
+          </picture>
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">

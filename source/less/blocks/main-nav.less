@@ -1,3 +1,9 @@
+.main-nav__logo-image {
+  display: block;
+  width: 74px;
+  height: 23px;
+}
+
 @media (max-width: @mobile-width-only) {
   .main-nav__list {
     background-color: @blue-dark;
@@ -7,9 +13,6 @@
     position: absolute;
     top: 22px;
     left: 20px;
-    display: block;
-    width: 74px;
-    height: 23px;
   }
 
   .main-nav__toggle {
@@ -70,9 +73,12 @@
 
 @media (min-width: @tablet-width) {
   .main-nav__logo-link {
-    top: 45px;
-    width: 74px;
-    height: 23px;
+    top: 30px;
+  }
+
+  .main-nav__logo-image {
+    width: 146px;
+    height: 40px;
   }
 
   .main-nav__toggle {
@@ -94,13 +100,12 @@
     background-color: transparent;
   }
 
-  .main-nav__list {
-    background-color: transparent;
+  .main-nav__logo-link {
+    top: auto;
   }
 
-  .main-nav__logo-link {
-    width: 74px;
-    height: 23px;
+  .main-nav__list {
+    background-color: transparent;
   }
 
   .main-nav__toggle {
