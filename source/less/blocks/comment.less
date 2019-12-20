@@ -10,9 +10,12 @@
 
   &--panorama {
     position: absolute;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
     height: 137px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -90,10 +93,7 @@
   }
 
   .comment__photo {
-    width: 300px;
-
     &--panorama {
-      width: 100%;
       height: 509px;
     }
   }
@@ -145,7 +145,6 @@
 @media (min-width: @desktop-width) {
   .comment__photo {
     &--panorama {
-      width: 100%;
       height: 506px;
     }
   }
