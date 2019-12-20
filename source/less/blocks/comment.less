@@ -5,12 +5,17 @@
 
 .comment__photo {
   display: block;
+  width: 280px;
+  height: auto;
 
   &--panorama {
     position: absolute;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
     height: 137px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -72,9 +77,13 @@
   border: none;
   margin-right: 15px;
   background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.comment__like-image {
+.comment__like-image path {
   fill: @pink;
 }
 
@@ -84,7 +93,10 @@
   }
 
   .comment__photo {
+    width: 300px;
+
     &--panorama {
+      width: auto;
       height: 509px;
     }
   }
@@ -97,6 +109,7 @@
   .comment__wrapper {
     display: flex;
     flex-direction: column;
+    height: 150px;  /* хак для IE */
     min-height: 155px;
     position: relative;
     padding: 23px 27px;

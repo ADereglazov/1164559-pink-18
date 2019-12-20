@@ -1,3 +1,24 @@
+.main-nav__logo-image {
+  display: block;
+  width: 74px;
+  height: 23px;
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+}
+
+.main-nav__logo-image--notindex {
+  &:hover path {
+    fill: @pink;
+  }
+
+  &:active path {
+    fill: @pink-opacity03;
+  }
+}
+
 @media (max-width: @mobile-width-only) {
   .main-nav__list {
     background-color: @blue-dark;
@@ -7,9 +28,6 @@
     position: absolute;
     top: 22px;
     left: 20px;
-    display: block;
-    width: 74px;
-    height: 23px;
   }
 
   .main-nav__toggle {
@@ -27,38 +45,32 @@
     }
   }
 
-  .main-nav--opened {
-    & .main-nav__toggle {
-      width: 24px;
-    }
-
-    & .main-nav__toggle-image--burger {
-      display: none;
-    }
+  .main-nav--opened .main-nav__toggle {
+    width: 24px;
   }
 
-  .main-nav--closed {
-    & .main-nav__toggle {
-      width: 50px;
-    }
+  .main-nav--opened .main-nav__toggle-image--burger {
+    display: none;
+  }
 
-    & .main-nav__toggle-image--cross {
-      display: none;
-    }
+  .main-nav--closed .main-nav__toggle {
+    width: 50px;
+  }
 
-    & .main-nav__list {
-      display: none;
-    }
+  .main-nav--closed .main-nav__toggle-image--cross {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__list {
+    display: none;
   }
 
   .main-nav__toggle-image {
-    fill: @white;
-
-    &:hover {
+    &:hover path {
       fill: @pink;
     }
 
-    &:active {
+    &:active path {
       fill: @pink-opacity03;
     }
   }
@@ -70,9 +82,17 @@
 
 @media (min-width: @tablet-width) {
   .main-nav__logo-link {
-    top: 45px;
-    width: 74px;
-    height: 23px;
+    top: 30px;
+  }
+
+  .main-nav__logo-image {
+    display: none;
+    width: 146px;
+    height: 40px;
+
+    &--tablet {
+      display: inherit;
+    }
   }
 
   .main-nav__toggle {
@@ -84,7 +104,6 @@
   .main-nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     min-height: 110px;
     width: @desktop-width;
     padding-right: 10px;
@@ -94,13 +113,24 @@
     background-color: transparent;
   }
 
-  .main-nav__list {
-    background-color: transparent;
+  .main-nav__logo-link {
+    top: auto;
+    margin-top: 27px;
   }
 
-  .main-nav__logo-link {
-    width: 74px;
-    height: 23px;
+  .main-nav__logo-image {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: inherit;
+    }
+  }
+
+  .main-nav .main-nav__list {
+    margin-top: 35px;
+    background-color: transparent;
   }
 
   .main-nav__toggle {
