@@ -9,15 +9,18 @@
   margin-left: 12px;
 }
 
+.copyright__image path {
+  fill: @pink;
+}
+
 .copyright__image {
   vertical-align: middle;
-  fill: @pink;
 
-  &:hover {
+  &:hover path {
     fill: @blue-dark;
   }
 
-  &:active {
+  &:active path {
     fill: @blue-dark-opacity01;
   }
 }
