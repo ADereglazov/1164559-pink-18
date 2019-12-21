@@ -15,27 +15,28 @@
   */
 }
 
-.map__interactive {
-  position: relative;
+.map__wrapper {
   height: 200px;
   overflow: hidden;
-  z-index: -1;
 }
 
 .map__image {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  position: relative;
+  bottom: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  z-index: -1;
 }
 
 @media (min-width: @tablet-width) {
-  .map__interactive {
+  .map__wrapper {
     height: 375px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .map__interactive {
+  .map__wrapper {
     height: 500px;
   }
 }
