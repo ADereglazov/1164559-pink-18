@@ -1,3 +1,7 @@
+.main-nav__logo-link[href] {
+  cursor: pointer;
+}
+
 .main-nav__logo-image {
   display: block;
   width: 74px;
@@ -9,14 +13,12 @@
   }
 }
 
-.main-nav__logo-image--notindex {
-  &:hover path {
-    fill: @pink;
-  }
+.main-nav__logo-image--notindex:hover path {
+  fill: @pink;
+}
 
-  &:active path {
-    fill: @pink-opacity03;
-  }
+.main-nav__logo-image--notindex:active path {
+  fill: @pink-opacity03;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -65,14 +67,12 @@
     display: none;
   }
 
-  .main-nav__toggle-image {
-    &:hover path {
-      fill: @pink;
-    }
+  .main-nav__toggle-image:hover path {
+    fill: @pink;
+  }
 
-    &:active path {
-      fill: @pink-opacity03;
-    }
+  .main-nav__toggle-image:active path {
+    fill: @pink-opacity03;
   }
 
   .main-nav--nojs .main-nav__toggle {
@@ -91,7 +91,7 @@
     height: 40px;
 
     &--tablet {
-      display: inherit;
+      display: block;
     }
   }
 
@@ -124,7 +124,7 @@
     }
 
     &--desktop {
-      display: inherit;
+      display: block;
     }
   }
 
