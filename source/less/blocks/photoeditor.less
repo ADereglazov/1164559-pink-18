@@ -88,9 +88,47 @@
 }
 
 .photoeditor__button-tool {
+  width: 48px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
   &:hover {
     cursor: pointer;
   }
+}
+
+.photoeditor__button-tool--current:hover {
+  cursor: default;
+}
+
+.photoeditor__icon-tool {
+  fill: @blue-dark-opacity03;
+
+  &:hover {
+    fill: @blue-dark-opacity06;
+  }
+}
+
+.photoeditor__button-tool:first-child .photoeditor__icon-tool {
+  width: 44px;
+  height: 44px;
+}
+
+.photoeditor__button-tool:nth-child(2) .photoeditor__icon-tool {
+  width: 48px;
+  height: 44px;
+}
+
+.photoeditor__button-tool:last-child .photoeditor__icon-tool {
+  width: 32px;
+  height: 32px;
+}
+
+
+.photoeditor__button-tool--current .photoeditor__icon-tool {
+  fill: @pink;
 }
 
 .photoeditor__range {
@@ -137,6 +175,44 @@
     margin-right: 15px;
   }
 
+  .photoeditor__button-tool:hover {
+    cursor: default;
+  }
+
+  @media (max-width: @desktop-width) {
+    .photoeditor__button-tool {
+      width: 24px;
+      height: 22px;
+    }
+
+    .photoeditor__button-tool:first-child .photoeditor__icon-tool {
+      width: 22px;
+      height: 22px;
+    }
+
+    .photoeditor__button-tool:nth-child(2) .photoeditor__icon-tool {
+      width: 24px;
+      height: 22px;
+    }
+
+    .photoeditor__button-tool:last-child .photoeditor__icon-tool {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .photoeditor__button-tool--current .photoeditor__icon-tool {
+    fill: @pink;
+  }
+
+  .photoeditor__icon-tool {
+    fill: @pink;
+
+    &:hover {
+      fill: @pink;
+    }
+  }
+
   .photoeditor__separator {
     display: none;
   }
@@ -155,7 +231,8 @@
 
   .photoeditor__wrapper-buttons-tools {
     flex-direction: column;
-    width: 22px;
+    align-items: center;
+    width: 24px;
     height: 190px;
     padding: 0;
     margin: 0;
@@ -197,6 +274,10 @@
 
   .photoeditor__photo {
     margin-left: 80px;
+  }
+
+  .photoeditor__wrapper-buttons-tools {
+    width: 48px;
   }
 
   .photoeditor__tools {
