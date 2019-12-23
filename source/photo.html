@@ -301,11 +301,10 @@
     <section class="photoeditor">
       <h2 class="visually-hidden">Редактор фото для загрузки на сайт</h2>
       <header class="photoeditor__header">
-        <div class="photoeditor__wrapper container">
+        <div class="photoeditor__wrapper-text container">
           <p class="photoeditor__title">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
         </div>
       </header>
-      <div class="photoeditor__separator"></div>
       <div class="photoeditor__wrapper container">
         <form class="photoeditor__form" action="https://echo.htmlacademy.ru" method="post">
           <picture>
@@ -336,12 +335,12 @@
               </button>
             </div>
             <div class="photoeditor__wrapper-inputs">
-              <input class="photoeditor__range visually-hidden" type="range" id="range1" min="1" max="100" value="80">
-              <label class="photoeditor__label" for="range1"></label>
-              <input class="photoeditor__range visually-hidden" type="range" id="range2" min="1" max="100" value="20">
-              <label class="photoeditor__label photoeditor__label--hide" for="range2"></label>
-              <input class="photoeditor__range visually-hidden" type="range" id="range3" min="1" max="100" value="50">
-              <label class="photoeditor__label photoeditor__label--hide" for="range3"></label>
+              <input class="photoeditor__range visually-hidden" type="range" id="range1" min="1" max="100" value="80" tabindex="-1">
+              <label class="photoeditor__label" for="range1" tabindex="0"></label>
+              <input class="photoeditor__range visually-hidden" type="range" id="range2" min="1" max="100" value="20" tabindex="-1">
+              <label class="photoeditor__label photoeditor__label--hide" for="range2" tabindex="0"></label>
+              <input class="photoeditor__range visually-hidden" type="range" id="range3" min="1" max="100" value="50" tabindex="-1">
+              <label class="photoeditor__label photoeditor__label--hide" for="range3" tabindex="0"></label>
             </div>
             <div class="photoeditor__buttons">
               <button class="photoeditor__button" type="submit">Запостить</button>
