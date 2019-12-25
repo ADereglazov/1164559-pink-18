@@ -3,6 +3,10 @@
   background-color: @gray-light;
 }
 
+.comment__link {
+  display: block;
+}
+
 .comment__photo {
   display: block;
   width: 280px;
@@ -89,6 +93,9 @@
 
 @media (min-width: @tablet-width) {
   .comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 300px;
   }
 
@@ -109,6 +116,7 @@
   .comment__wrapper {
     display: flex;
     flex-direction: column;
+    height: 100%;
     min-height: 155px;
     position: relative;
     padding: 23px 27px;
@@ -124,6 +132,7 @@
 
   .comment__like {
     display: flex;
+    padding-top: 10px;
 
     &--first {
       position: absolute;
