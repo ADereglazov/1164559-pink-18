@@ -1,9 +1,45 @@
-.map__interactive {
-  padding: 0;
+.map {
+  background-image: url("../img/bg-triangle-white-footer.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+
+.map__wrapper {
+  position: relative;
+  width: @mobile-width;
+  height: 200px;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .map__image {
-  display: block;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: auto;
   z-index: -1;
+}
+
+@media (min-width: @tablet-width) {
+  .map__wrapper {
+    width: @tablet-width;
+    height: 375px;
+  }
+
+  .map__image {
+    bottom: -120px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__wrapper {
+    width: @desktop-width;
+    height: 500px;
+  }
+
+  .map__image {
+    bottom: -160px;
+  }
 }

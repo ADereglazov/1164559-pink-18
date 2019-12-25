@@ -1,10 +1,10 @@
 .prices {
   overflow: hidden;
   min-height: 470px;
-}
-
-.prices__wrapper {
-  padding-top: 89px;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
 }
 
 .prices__table {
@@ -13,6 +13,7 @@
   align-items: center;
   table-layout: fixed;
   line-height: 30px;
+  margin-top: 89px;
   margin-bottom: 40px;
   border-collapse: collapse;
 }
@@ -94,7 +95,7 @@
     &::before {
       content: "";
       position: absolute;
-      bottom: 22px;
+      top: 33px;
       right: 30px;
       width: 14px;
       height: 3px;
@@ -106,7 +107,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 27px;
+      top: 28px;
       right: 9px;
       width: 29px;
       height: 3px;
@@ -120,7 +121,7 @@
     &::before {
       content: "";
       position: absolute;
-      bottom: 28px;
+      top: 28px;
       right: 11px;
       width: 36px;
       height: 3px;
@@ -132,7 +133,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 28px;
+      top: 28px;
       right: 11px;
       width: 36px;
       height: 3px;
@@ -145,7 +146,6 @@
 
 .prices__text-mobile {
   text-transform: uppercase;
-  text-shadow: 275px 0 @blue-dark, -275px 0 @blue-dark;
 }
 
 @media (min-width: @tablet-width) {
@@ -170,25 +170,25 @@
 
   .prices__data--yes {
     &::before {
-      right: 80px;
-      bottom: 17px;
+      top: 25px;
+      right: 79px;
     }
 
     &::after {
-      right: 59px;
-      bottom: 22px;
+      top: 19px;
+      right: 57px;
     }
   }
 
   .prices__data--no {
     &::before {
+      top: 19px;
       right: 59px;
-      bottom: 24px;
     }
 
     &::after {
+      top: 19px;
       right: 59px;
-      bottom: 24px;
     }
   }
 
@@ -272,25 +272,25 @@
 
   .prices__data--yes {
     &::before {
+      top: 33px;
       right: 119px;
-      bottom: 22px;
     }
 
     &::after {
+      top: 29px;
       right: 97px;
-      bottom: 26px;
     }
   }
 
   .prices__data--no {
     &::before {
-      right: 99px;
-      bottom: 25px;
+      top: 28px;
+      right: 98px;
     }
 
     &::after {
-      right: 99px;
-      bottom: 25px;
+      top: 28px;
+      right: 98px;
     }
   }
 }

@@ -6,6 +6,10 @@
   background-position: center;
   background-size: cover;
   background-color: @blue-darken;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg.jpg");
+  }
 }
 
 .challenge__text {
@@ -24,6 +28,10 @@
     min-height: 729px;
     margin-bottom: -288px;
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat @blue-darken;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   .challenge__text {
@@ -40,6 +48,10 @@
     min-height: 853px;
     margin-bottom: -458px;
     background: url("../img/bg-back-desktop@1x.jpg") no-repeat @blue-darken;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   .challenge__text {

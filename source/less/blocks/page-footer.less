@@ -13,7 +13,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 200px; /* хак для IE */
   min-height: 205px;
 }
 
@@ -21,7 +20,28 @@
   display: block;
   width: 146px;
   height: 40px;
+
+  &--notmobile {
+    display: none;
+  }
 }
+
+.page-footer__logo-link[href]:hover {
+  cursor: pointer;
+}
+
+.page-footer__logo-image--notindex:hover path {
+  fill: @pink;
+}
+
+.page-footer__logo-image--notindex:active .page-footer__logo-image-glasses {
+  fill: @pink-opacity03;
+}
+
+.page-footer__logo-image--notindex:active .page-footer__logo-image-text {
+  fill: @blue-dark-opacity03;
+}
+
 
 @media (min-width: @tablet-width) {
   .page-footer {
@@ -48,12 +68,22 @@
 @media (min-width: @desktop-width) {
   .page-footer {
     min-height: 197px;
-    padding-top: 78px;
+    padding-top: 105px;
   }
 
   .page-footer__logo-link {
     padding-right: 10px;
     margin-top: -19px;
+  }
+
+  .page-footer__logo-image {
+    display: none;
+    width: 146px;
+    height: 40px;
+
+    &--notmobile {
+      display: block;
+    }
   }
 
   .page-footer__copyright {

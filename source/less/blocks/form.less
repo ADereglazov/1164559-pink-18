@@ -76,6 +76,10 @@
   }
 }
 
+.form__icon {
+  display: none;
+}
+
 .form__fieldset {
   padding: 0;
   border: 0;
@@ -242,7 +246,7 @@
     border-color: @black;
   }
 
-  ::-ms-clear {
+  &::-ms-clear {
     width: 0; /* Убираем "крестики" в инпутах для IE */
     height: 0;
   }
@@ -433,13 +437,34 @@
     }
 
     &--reverse {
+      position: relative;
       flex-direction: column-reverse;
       margin-bottom: 28px;
     }
 
     &--reverse input {
+      padding-right: 80px;
       margin-bottom: 12px;
     }
+
+    &--reverse + &--reverse {
+      margin-top: 0;
+    }
+  }
+
+  .form__icon {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    display: block;
+    width: 56px;
+    height: 56px;
+    border: 20px solid @gray-lighter;
+    background-color: @gray-lighter;
+  }
+
+  .form__icon path {
+    fill: @pink;
   }
 
   .form__radio-text {
@@ -533,7 +558,6 @@
     }
 
     &--reverse + &--reverse {
-      margin-top: 0;
       margin-left: 74px;
     }
 
@@ -542,6 +566,10 @@
       align-content: space-between;
       height: 177px;
     }
+  }
+
+  .form__wrapper-elements--reverse input {
+    padding-right: 80px;
   }
 
   .form__legend {
