@@ -3,40 +3,43 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
-  /*
-  background-image: url("../img/bg-map-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/bg-map-mobile@2x.jpg");
-  }
-  */
 }
 
 .map__wrapper {
+  position: relative;
+  width: @mobile-width;
   height: 200px;
   overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .map__image {
-  position: relative;
-  bottom: 56%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: auto;
   z-index: -1;
 }
 
 @media (min-width: @tablet-width) {
   .map__wrapper {
+    width: @tablet-width;
     height: 375px;
+  }
+
+  .map__image {
+    bottom: -120px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .map__wrapper {
+    width: @desktop-width;
     height: 500px;
+  }
+
+  .map__image {
+    bottom: -160px;
   }
 }
