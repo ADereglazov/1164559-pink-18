@@ -12,6 +12,7 @@
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
+  z-index: -1;
 
   &::before {
     content: "";
@@ -24,6 +25,7 @@
     background-color: @pink;
     border: 10px solid @white;
     border-radius: 50%;
+    z-index: 1;
   }
 }
 
@@ -32,13 +34,12 @@
   bottom: -30px;
   left: 0;
   width: auto;
-  z-index: -1;
 }
 
 @media (min-width: @tablet-width) {
   .map__wrapper {
     width: @tablet-width;
-    height: 395px;
+    height: 500px;
 
     &::before {
       top: 210px;
@@ -54,15 +55,15 @@
 @media (min-width: @desktop-width) {
   .map__wrapper {
     width: @desktop-width;
-    height: 485px;
+    height: 490px;
 
     &::before {
-      top: 245px;
+      top: 250px;
       left: 462px;
     }
   }
 
   .map__image {
-    bottom: -115px;
+    bottom: -192px;
   }
 }

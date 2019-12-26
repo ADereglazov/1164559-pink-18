@@ -106,14 +106,14 @@
         <h2 class="gallery__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
         <ul class="gallery__list-comments">
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link comment__link--first" href="#">
               <picture>
                 <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
                 <img class="comment__photo comment__photo--panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Панорама дня">
               </picture>
+              <span class="comment__panorama-label">Панорама дня</span>
             </a>
-            <span class="comment__panorama-label">Панорама дня</span>
             <div class="comment__wrapper comment__wrapper--first">
               <div class="comment__user">
                 <b class="comment__username">Анна</b>
@@ -335,12 +335,15 @@
               </button>
             </div>
             <div class="photoeditor__wrapper-inputs">
-              <input class="photoeditor__range visually-hidden" type="range" id="range1" min="1" max="100" value="80" tabindex="-1">
-              <label class="photoeditor__label" for="range1" tabindex="0"></label>
-              <input class="photoeditor__range visually-hidden" type="range" id="range2" min="1" max="100" value="20" tabindex="-1">
-              <label class="photoeditor__label photoeditor__label--hide" for="range2" tabindex="0"></label>
-              <input class="photoeditor__range visually-hidden" type="range" id="range3" min="1" max="100" value="50" tabindex="-1">
-              <label class="photoeditor__label photoeditor__label--hide" for="range3" tabindex="0"></label>
+              <label class="photoeditor__label" for="range1" tabindex="0">
+                <input class="photoeditor__range visually-hidden" type="range" id="range1" min="1" max="100" value="80" tabindex="-1">
+              </label>
+              <label class="photoeditor__label photoeditor__label--hide" for="range2" tabindex="0">
+                <input class="photoeditor__range visually-hidden" type="range" id="range2" min="1" max="100" value="20" tabindex="-1">
+              </label>
+              <label class="photoeditor__label photoeditor__label--hide" for="range3" tabindex="0">
+                <input class="photoeditor__range visually-hidden" type="range" id="range3" min="1" max="100" value="50" tabindex="-1">
+              </label>
             </div>
             <div class="photoeditor__buttons">
               <button class="photoeditor__button" type="submit">Запостить</button>
