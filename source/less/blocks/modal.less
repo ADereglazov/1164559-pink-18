@@ -1,4 +1,8 @@
 .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: block;
   width: @mobile-width;
   text-align: center;
@@ -6,12 +10,13 @@
   margin-left: auto;
   background-color: @white;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+  z-index: 10;
 
   &--failure {
     padding-top: 40px;
   }
 
-  &--sended {
+  &--sent {
     padding-top: 20px;
   }
 
