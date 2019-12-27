@@ -13,20 +13,6 @@
   margin-right: auto;
   margin-left: auto;
   z-index: -1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 125px;
-    left: 143px;
-    display: block;
-    width: 35px;
-    height: 35px;
-    background-color: @pink;
-    border: 10px solid @white;
-    border-radius: 50%;
-    z-index: 1;
-  }
 }
 
 .map__image {
@@ -40,11 +26,6 @@
   .map__wrapper {
     width: @tablet-width;
     height: 500px;
-
-    &::before {
-      top: 210px;
-      left: 312px;
-    }
   }
 
   .map__image {
@@ -56,11 +37,6 @@
   .map__wrapper {
     width: @desktop-width;
     height: 490px;
-
-    &::before {
-      top: 250px;
-      left: 462px;
-    }
   }
 
   .map__image {
