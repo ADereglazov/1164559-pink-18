@@ -11,13 +11,13 @@ var modalSent = document.querySelector(".modal--sent");
 var closeSentButton = modalSent.querySelector(".modal__button");
 
 // Убираем у полей атрибуты required чтобы валидация полей обрабатывалась с помощью JS
-formSurname.required = false;
-formName.required = false;
-formEmail.required = false;
+//formSurname.required = false;
+//formName.required = false;
+//formEmail.required = false;
 
 formButton.addEventListener('click', function (evt) {
   evt.preventDefault();
-  if (!formSurname.value || !formName.value || !formEmail.value) {
+  if (!formSurname.value || !formName.value || !formEmail.value || !formEmail.checkValidity()) {
     modalFailure.classList.remove('modal--hide');
     closeFailureButton.focus();
   } else {
@@ -29,6 +29,18 @@ formButton.addEventListener('click', function (evt) {
 modalFailure.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalFailure.classList.add('modal--hide');
+
+  if (!formSurname.value) {
+    formSurname.focus();
+    return;
+  }
+
+  if (!formName.value) {
+    formName.focus();
+    return;
+  }
+
+  formEmail.focus();
 });
 
 modalSent.addEventListener('click', function (evt) {
