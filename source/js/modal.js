@@ -4,12 +4,12 @@ var form = document.querySelector('.form');
 var formSurname = form.querySelector('#surname-field');
 var formName = form.querySelector('#name-field');
 var formEmail = form.querySelector('#email-field');
+var formFieldsRequired = form.querySelectorAll('input[required]');
 
 var modalFailure = document.querySelector('.modal--failure');
 var closeFailureButton = modalFailure.querySelector('.modal__button');
 var modalSent = document.querySelector('.modal--sent');
 var closeSentButton = modalSent.querySelector('.modal__button');
-var formFieldsRequired = form.querySelectorAll('input[required]');
 
 formButton.addEventListener('click', function (evt) {
   evt.preventDefault();
