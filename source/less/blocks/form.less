@@ -70,10 +70,10 @@
 .form__wrapper-elements {
   display: flex;
   flex-direction: column;
+}
 
-  &--reverse + &--reverse {
-    margin-top: 20px;
-  }
+.form__wrapper-elements--reverse + .form__wrapper-elements--reverse {
+  margin-top: 20px;
 }
 
 .form__icon {
@@ -84,10 +84,10 @@
   padding: 0;
   border: 0;
   margin: 0;
+}
 
-  &--notbordered div + div {
-    margin-top: 20px;
-  }
+.form__fieldset--notbordered div + div {
+  margin-top: 20px;
 }
 
 .form__progress-label {
@@ -399,29 +399,29 @@
       align-items: center;
     }
 
-    &--row label {
-      padding-right: 19px;
-      padding-left: 0;
-    }
-
-    &--row input {
-      flex-grow: 1;
-    }
-
     &--reverse {
       position: relative;
       flex-direction: column-reverse;
       margin-bottom: 30px;
     }
+  }
 
-    &--reverse input {
-      padding-right: 80px;
-      margin-bottom: 12px;
-    }
+  .form__wrapper-elements--row label {
+    padding-right: 19px;
+    padding-left: 0;
+  }
 
-    &--reverse + &--reverse {
-      margin-top: 0;
-    }
+  .form__wrapper-elements--row input {
+    flex-grow: 1;
+  }
+
+  .form__wrapper-elements--reverse input {
+    padding-right: 80px;
+    margin-bottom: 12px;
+  }
+
+  .form__wrapper-elements--reverse + .form__wrapper-elements--reverse {
+    margin-top: 0;
   }
 
   .form__icon {
@@ -513,14 +513,14 @@
       margin-top: 0;
     }
 
-    &:nth-child(4) .form__wrapper-container {
-      width: 435px;
-      padding: 0;
-    }
-
     &:last-child {
       padding-bottom: 0;
     }
+  }
+
+  .form__wrapper:nth-child(4) .form__wrapper-container {
+    width: 435px;
+    padding: 0;
   }
 
   .form__wrapper-elements {
@@ -530,15 +530,15 @@
       margin-bottom: 10px;
     }
 
-    &--reverse + &--reverse {
-      margin-left: 74px;
-    }
-
     &--checkboxes {
       flex-wrap: wrap;
       align-content: space-between;
       height: 177px;
     }
+  }
+
+  .form__wrapper-elements--reverse + .form__wrapper-elements--reverse {
+    margin-left: 74px;
   }
 
   .form__wrapper-elements--reverse input {
