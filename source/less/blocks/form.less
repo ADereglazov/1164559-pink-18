@@ -238,38 +238,20 @@
     border-color: @black;
   }
 
-  &:required {
-    border-color: @pink;
-  }
-
   &:focus {
     outline: none;
-    border-color: @black;
-  }
-
-  &:focus:invalid {
     border-color: @pink;
-  }
-
-  &:required:valid {
-    border-color: @gray-lighter;
-  }
-
-  &:required:valid:hover {
-    border-color: @black;
-  }
-
-  &:required:valid:focus {
-    border-color: @black;
-  }
-
-  &:required:invalid:hover {
-    border-color: @black;
   }
 
   &::-ms-clear {
     width: 0; /* Убираем "крестики" в инпутах для IE */
     height: 0;
+  }
+}
+
+.form__required {
+  &:invalid {
+    border-color: @pink;
   }
 }
 

@@ -1,23 +1,18 @@
-var formButton = document.querySelector(".form__button");
+var formButton = document.querySelector('.form__button');
 
-var form = document.querySelector(".form");
-var formSurname = form.querySelector("#surname-field");
-var formName = form.querySelector("#name-field");
-var formEmail = form.querySelector("#email-field");
+var form = document.querySelector('.form');
+var formSurname = form.querySelector('#surname-field');
+var formName = form.querySelector('#name-field');
+var formEmail = form.querySelector('#email-field');
 
-var modalFailure = document.querySelector(".modal--failure");
-var closeFailureButton = modalFailure.querySelector(".modal__button");
-var modalSent = document.querySelector(".modal--sent");
-var closeSentButton = modalSent.querySelector(".modal__button");
-
-// Убираем у полей атрибуты required чтобы валидация полей обрабатывалась с помощью JS
-//formSurname.required = false;
-//formName.required = false;
-//formEmail.required = false;
+var modalFailure = document.querySelector('.modal--failure');
+var closeFailureButton = modalFailure.querySelector('.modal__button');
+var modalSent = document.querySelector('.modal--sent');
+var closeSentButton = modalSent.querySelector('.modal__button');
 
 formButton.addEventListener('click', function (evt) {
   evt.preventDefault();
-  if (!formSurname.value || !formName.value || !formEmail.value || !formEmail.checkValidity()) {
+  if (!formSurname.value || !formName.value || !formEmail.value || !formEmail.validity.valid) {
     modalFailure.classList.remove('modal--hide');
     closeFailureButton.focus();
   } else {
@@ -29,6 +24,11 @@ formButton.addEventListener('click', function (evt) {
 modalFailure.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalFailure.classList.add('modal--hide');
+
+  var formTextFieldRequired = form.querySelectorAll('input[required]');
+  for (var i = 0; i < formTextFieldRequired.length; i++) {
+    formTextFieldRequired[i].classList.add('form__required');
+  }
 
   if (!formSurname.value) {
     formSurname.focus();
