@@ -25,9 +25,9 @@ modalFailure.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalFailure.classList.add('modal--hide');
 
-  var formTextFieldRequired = form.querySelectorAll('input[required]');
-  for (var i = 0; i < formTextFieldRequired.length; i++) {
-    formTextFieldRequired[i].classList.add('form__required');
+  var formFieldRequired = form.querySelectorAll('input[required]');
+  for (var i = 0; i < formFieldRequired.length; i++) {
+    formFieldRequired[i].classList.add('form__required');
   }
 
   if (!formSurname.value) {
