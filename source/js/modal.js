@@ -9,6 +9,7 @@ var modalFailure = document.querySelector('.modal--failure');
 var closeFailureButton = modalFailure.querySelector('.modal__button');
 var modalSent = document.querySelector('.modal--sent');
 var closeSentButton = modalSent.querySelector('.modal__button');
+var formFieldsRequired = form.querySelectorAll('input[required]');
 
 formButton.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -25,9 +26,8 @@ modalFailure.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalFailure.classList.add('modal--hide');
 
-  var formFieldRequired = form.querySelectorAll('input[required]');
-  for (var i = 0; i < formFieldRequired.length; i++) {
-    formFieldRequired[i].classList.add('form__required');
+  for (var i = 0; i < formFieldsRequired.length; i++) {
+    formFieldsRequired[i].classList.add('form__required');
   }
 
   if (!formSurname.value) {
@@ -42,6 +42,12 @@ modalFailure.addEventListener('click', function (evt) {
 
   formEmail.focus();
 });
+
+for (var i = 0; i < formFieldsRequired.length; i++) {
+  formFieldsRequired[i].addEventListener('focus', function (evt) {
+    evt.target.classList.remove('form__required');
+  });
+}
 
 modalSent.addEventListener('click', function (evt) {
   evt.preventDefault();
