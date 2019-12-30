@@ -5,6 +5,14 @@
 
 .comment__link {
   display: block;
+
+  &--first {
+    position: absolute;
+    display: block;
+    width: @mobile-width;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .comment__photo {
@@ -13,19 +21,15 @@
   height: auto;
 
   &--panorama {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    height: 137px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
   }
 }
 
 .comment__panorama-label {
+  position: absolute;
+  right: 20px;
+  top: 0;
   display: block;
-  position: relative;
   width: 140px;
   height: 36px;
   font-size: 12px;
@@ -33,14 +37,16 @@
   text-align: center;
   text-transform: uppercase;
   padding-top: 6px;
-  margin-bottom: 101px;
-  margin-left: auto;
   color: @white;
   background-color: @pink;
 }
 
 .comment__wrapper {
   padding: 17px 12px 17px 17px;
+
+  &--first {
+    margin-top: 137px;
+  }
 }
 
 .comment__username {
@@ -87,10 +93,6 @@
   }
 }
 
-.comment__like-image path {
-  fill: @pink;
-}
-
 @media (min-width: @tablet-width) {
   .comment {
     display: flex;
@@ -99,18 +101,23 @@
     width: 300px;
   }
 
+  .comment__link {
+    &--first {
+      width: @tablet-width;
+    }
+  }
+
   .comment__photo {
     width: 300px;
 
     &--panorama {
-      width: auto;
+      width: 100%;
       height: 509px;
     }
   }
 
   .comment__panorama-label {
-    margin-top: 57px;
-    margin-bottom: 416px;
+    top: 57px;
   }
 
   .comment__wrapper {
@@ -123,6 +130,7 @@
 
     &--first {
       min-height: 121px;
+      margin-top: 509px;
     }
   }
 
@@ -139,6 +147,7 @@
       top: 25px;
       right: 25px;
       min-width: 124px;
+      padding: 0;
     }
   }
 
@@ -154,6 +163,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .comment__link {
+    &--first {
+      width: 1200px;
+    }
+  }
+
   .comment__photo {
     &--panorama {
       height: 506px;
@@ -161,13 +176,14 @@
   }
 
   .comment__panorama-label {
-    margin-top: 53px;
-    margin-bottom: 417px;
+    top: 53px;
+    right: 130px;
   }
 
   .comment__wrapper {
     &--first {
       min-height: 96px;
+      margin-top: 506px;
     }
   }
 

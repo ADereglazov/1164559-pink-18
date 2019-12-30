@@ -1,24 +1,26 @@
 .main-nav__logo-link[href] {
   cursor: pointer;
+
+  &:hover .main-nav__logo-image {
+    color: @pink;
+    fill: @pink;
+  }
+
+  &:active .main-nav__logo-image {
+    color: @pink-opacity03;
+    fill: @pink-opacity03;
+  }
 }
 
 .main-nav__logo-image {
   display: block;
-  width: 74px;
-  height: 23px;
+  color: @pink;
+  fill: @white;
 
   &--tablet,
   &--desktop {
     display: none;
   }
-}
-
-.main-nav__logo-image--notindex:hover path {
-  fill: @pink;
-}
-
-.main-nav__logo-image--notindex:active path {
-  fill: @pink-opacity03;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -45,18 +47,22 @@
     &:hover {
       cursor: pointer;
     }
+
+    &:hover .main-nav__toggle-image {
+      color: @pink;
+    }
+
+    &:active .main-nav__toggle-image {
+      color: @pink;
+    }
   }
 
-  .main-nav--opened .main-nav__toggle {
-    width: 24px;
+  .main-nav__toggle-image {
+    color: @white;
   }
 
   .main-nav--opened .main-nav__toggle-image--burger {
     display: none;
-  }
-
-  .main-nav--closed .main-nav__toggle {
-    width: 50px;
   }
 
   .main-nav--closed .main-nav__toggle-image--cross {
@@ -65,14 +71,6 @@
 
   .main-nav--closed .main-nav__list {
     display: none;
-  }
-
-  .main-nav__toggle-image:hover path {
-    fill: @pink;
-  }
-
-  .main-nav__toggle-image:active path {
-    fill: @pink-opacity03;
   }
 
   .main-nav--nojs .main-nav__toggle {
@@ -87,8 +85,6 @@
 
   .main-nav__logo-image {
     display: none;
-    width: 146px;
-    height: 40px;
 
     &--tablet {
       display: block;

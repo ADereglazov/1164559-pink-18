@@ -56,10 +56,10 @@
   position: absolute;
   top: 0;
   left: -2px;
+}
 
-  &--tablet {
-    display: none;
-  }
+.prices__img-hit-tablet {
+  display: none;
 }
 
 .prices__hit {
@@ -150,12 +150,17 @@
 
 @media (min-width: @tablet-width) {
   .prices {
-    min-height: 375px;
+    min-height: 380px;
+  }
+
+  .prices__wrapper {
+    padding-top: 92px;
   }
 
   .prices__table {
     display: table;
     width: 100%;
+    margin: 0;
   }
 
   .prices__head:first-child,
@@ -208,13 +213,13 @@
 
     .prices__img-hit {
       display: none;
+    }
 
-      &--tablet {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
+    .prices__img-hit-tablet {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     .prices__row {
@@ -254,7 +259,7 @@
   }
 
   .prices__wrapper {
-    padding-top: 140px;
+    padding-top: 142px;
   }
 
   .prices__row {
