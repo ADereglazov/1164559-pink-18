@@ -18,30 +18,28 @@
 
 .page-footer__logo-image {
   display: block;
-  width: 146px;
-  height: 40px;
+  fill: @pink;
+  color: @blue-dark;
 
-  &--notmobile {
+  &--desktop {
     display: none;
   }
 }
 
-.page-footer__logo-link[href]:hover {
-  cursor: pointer;
-}
+.page-footer__logo-link[href] {
+  &:hover {
+    cursor: pointer;
+  }
 
-.page-footer__logo-image--notindex:hover path {
-  fill: @pink;
-}
+  &:hover .page-footer__logo-image {
+    color: @pink;
+  }
 
-.page-footer__logo-image--notindex:active .page-footer__logo-image-glasses {
-  fill: @pink-opacity03;
+  &:active .page-footer__logo-image {
+    fill: @pink-opacity03;
+    color: @blue-dark-opacity03;
+  }
 }
-
-.page-footer__logo-image--notindex:active .page-footer__logo-image-text {
-  fill: @blue-dark-opacity03;
-}
-
 
 @media (min-width: @tablet-width) {
   .page-footer {
@@ -78,10 +76,8 @@
 
   .page-footer__logo-image {
     display: none;
-    width: 146px;
-    height: 40px;
 
-    &--notmobile {
+    &--desktop {
       display: block;
     }
   }
