@@ -147,10 +147,10 @@
     border-radius: 50%;
     background-color: @white;
   }
-}
 
-.photoeditor__label:active::before {
-  background-color: @pink;
+  &:active::before {
+    background-color: @pink;
+  }
 }
 
 .photoeditor__label--hide {
@@ -217,34 +217,42 @@
     .photoeditor__button-tool {
       width: 24px;
       height: 22px;
-    }
 
-    .photoeditor__button-tool:first-child .photoeditor__icon-tool {
-      width: 22px;
-      height: 22px;
-    }
+      &:first-child .photoeditor__icon-tool {
+        width: 22px;
+        height: 22px;
+      }
 
-    .photoeditor__button-tool:nth-child(2) .photoeditor__icon-tool {
-      width: 24px;
-      height: 22px;
-    }
+      &:nth-child(2) .photoeditor__icon-tool {
+        width: 24px;
+        height: 22px;
+      }
 
-    .photoeditor__button-tool:last-child .photoeditor__icon-tool {
-      width: 16px;
-      height: 16px;
+      &:last-child .photoeditor__icon-tool {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 
-  .photoeditor__label:first-child::before {
-    right: 40px;
-  }
+  .photoeditor__label {
+    width: 200px;
 
-  .photoeditor__label:nth-child(2)::before {
-    left: 22px;
-  }
+    &--hide {
+      display: block;
+    }
 
-  .photoeditor__label:last-child::before {
-    left: 93px;
+    &:first-child::before {
+      right: 40px;
+    }
+
+    &:nth-child(2)::before {
+      left: 22px;
+    }
+
+    &:last-child::before {
+      left: 93px;
+    }
   }
 
   .photoeditor__icon-tool {
@@ -261,14 +269,6 @@
 
   .photoeditor__range + .photoeditor__range {
     display: inherit;
-  }
-
-  .photoeditor__label {
-    width: 200px;
-
-    &--hide {
-      display: block;
-    }
   }
 
   .photoeditor__wrapper-buttons-tools {
@@ -357,18 +357,18 @@
 
   .photoeditor__label {
     width: 288px;
-  }
 
-  .photoeditor__label::before {
-    left: 70px;
-  }
+    &::before {
+      left: 70px;
+    }
 
-  .photoeditor__label:nth-child(2)::before {
-    left: 246px;
-  }
+    &:nth-child(2)::before {
+      left: 246px;
+    }
 
-  .photoeditor__label:last-child::before {
-    left: 160px;
+    &:last-child::before {
+      left: 160px;
+    }
   }
 
   .photoeditor__buttons {
