@@ -144,7 +144,7 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 15px;
+    top: 22px;
     left: 8px;
     width: 10px;
     height: 2px;
@@ -155,7 +155,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 19px;
+    top: 18px;
     left: 12px;
     width: 22px;
     height: 2px;
@@ -165,6 +165,8 @@
 }
 
 .form__progress-input:checked:disabled + .form__progress-label .form__progress-text {
+  color: @blue-dark-opacity06;
+
   &::before {
     background-color: @gray-lighter;
   }
@@ -172,6 +174,10 @@
   &::after {
     background-color: @gray-lighter;
   }
+}
+
+.form__progress-input:not(:checked):disabled + .form__progress-label .form__progress-text {
+  color: @blue-dark-opacity06;
 }
 
 .form__radio-label {
@@ -194,7 +200,7 @@
   }
 }
 
-.form__radio-field:checked + .form__radio-label {
+.form__radio-field:checked:not(:disabled) + .form__radio-label {
   &::before {
     background-color: @pink;
   }
@@ -214,6 +220,18 @@
       box-shadow: 0 0 0 2px @pink;
     }
   }
+}
+
+.form__radio-field:checked:disabled + .form__radio-label::before {
+  background-color: @gray-lighter;
+}
+
+.form__radio-field:checked:disabled + .form__radio-label .form__radio-text {
+  color: @blue-dark-opacity06;
+}
+
+.form__radio-field:not(:checked):disabled + .form__radio-label .form__radio-text {
+  color: @blue-dark-opacity06;
 }
 
 .form__radio-field:focus + .form__radio-label {
