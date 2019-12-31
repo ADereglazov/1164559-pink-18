@@ -1,13 +1,18 @@
 .map {
   position: relative;
-}
 
-.map__triangle {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: auto;
-  z-index: 5;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    z-index: 5;
+    pointer-events: none;
+  }
 }
 
 .map__wrapper {
