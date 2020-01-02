@@ -361,7 +361,7 @@
 
   .form__legend {
     width: inherit;
-    padding: 0 32px;
+    padding: 0 30px;
     margin: 0;
 
     &--hide {
@@ -505,7 +505,8 @@
   }
 
   .form__form {
-    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: @desktop-width;
     margin: 0 auto;
   }
@@ -516,18 +517,21 @@
     }
 
     &--radio {
-      min-height: 312px;
+      min-height: 305px;
       padding: 45px 20px;
     }
   }
 
   .form__wrapper {
+    &:first-child {
+      width: auto;
+      margin-left: 0;
+    }
+
     &:nth-child(4) {
-      position: absolute;
       width: 435px;
-      top: -16px;
-      right: 10px;
-      margin-top: 0;
+      margin-top: -15px;
+      margin-right: 10px;
     }
 
     &:last-child {
