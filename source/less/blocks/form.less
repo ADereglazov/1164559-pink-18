@@ -144,7 +144,7 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 15px;
+    top: 22px;
     left: 8px;
     width: 10px;
     height: 2px;
@@ -155,7 +155,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 19px;
+    top: 18px;
     left: 12px;
     width: 22px;
     height: 2px;
@@ -165,6 +165,8 @@
 }
 
 .form__progress-input:checked:disabled + .form__progress-label .form__progress-text {
+  color: @blue-dark-opacity06;
+
   &::before {
     background-color: @gray-lighter;
   }
@@ -172,6 +174,10 @@
   &::after {
     background-color: @gray-lighter;
   }
+}
+
+.form__progress-input:not(:checked):disabled + .form__progress-label .form__progress-text {
+  color: @blue-dark-opacity06;
 }
 
 .form__radio-label {
@@ -194,7 +200,7 @@
   }
 }
 
-.form__radio-field:checked + .form__radio-label {
+.form__radio-field:checked:not(:disabled) + .form__radio-label {
   &::before {
     background-color: @pink;
   }
@@ -216,6 +222,18 @@
   }
 }
 
+.form__radio-field:checked:disabled + .form__radio-label::before {
+  background-color: @gray-lighter;
+}
+
+.form__radio-field:checked:disabled + .form__radio-label .form__radio-text {
+  color: @blue-dark-opacity06;
+}
+
+.form__radio-field:not(:checked):disabled + .form__radio-label .form__radio-text {
+  color: @blue-dark-opacity06;
+}
+
 .form__radio-field:focus + .form__radio-label {
   &::before {
     box-shadow: 0 0 0 2px @black;
@@ -228,7 +246,7 @@
 }
 
 .form__text-field {
-  min-height: 60px;
+  height: 60px;
   padding: 0 20px;
   background-color: @white;
   border: 2px solid @gray-lighter;
@@ -322,7 +340,7 @@
 
   .form__fieldset {
     padding-right: 60px;
-    padding-left: 60px;
+    padding-left: 58px;
     border: 2px solid @gray-light;
 
     &--notbordered {
@@ -343,7 +361,7 @@
 
   .form__legend {
     width: inherit;
-    padding: 0 32px;
+    padding: 0 30px;
     margin: 0;
 
     &--hide {
@@ -352,7 +370,7 @@
     }
 
     &--checkboxes {
-      margin-bottom: 42px;
+      margin-bottom: 43px;
     }
   }
 
@@ -407,6 +425,10 @@
       flex-direction: column-reverse;
       margin-bottom: 30px;
     }
+
+    &--reverse:last-child {
+      margin-bottom: 25px;
+    }
   }
 
   .form__wrapper-elements--row label {
@@ -420,6 +442,7 @@
 
   .form__wrapper-elements--reverse input {
     padding-right: 80px;
+    padding-left: 17px;
     margin-bottom: 12px;
   }
 
@@ -436,6 +459,7 @@
     height: 56px;
     border: 20px solid @gray-lighter;
     background-color: @gray-lighter;
+    pointer-events: none;
   }
 
   .form__radio-text {
@@ -453,18 +477,19 @@
   }
 
   .form__text-label {
-    padding-left: 17px;
+    padding-left: 18px;
     margin-bottom: 0;
   }
 
   .form__description-text {
     width: 498px;
-    height: 190px;
-    margin-top: 35px;
-    margin-bottom: 47px;
+    height: 195px;
+    padding: 15px 18px;
+    margin-top: 38px;
+    margin-bottom: 42px;
   }
 
-  .form__button {
+  .form__wrapper-elements .form__button {
     width: 300px;
   }
 
@@ -478,7 +503,6 @@
   .form__title {
     width: 775px;
     min-height: 200px;
-    padding-left: 15px;
     margin-bottom: 38px;
 
     &--hide {
@@ -487,29 +511,38 @@
   }
 
   .form__form {
-    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: @desktop-width;
     margin: 0 auto;
   }
 
   .form__fieldset {
+    padding-right: 58px;
+
     &--notbordered {
       width: 435px;
     }
 
     &--radio {
-      height: 312px;
+      min-height: 305px;
       padding: 45px 20px;
+    }
+
+    &--checkboxes {
+      padding-right: 0;
+      min-height: 242px;
     }
   }
 
   .form__wrapper {
+    &:first-child {
+      width: 455px;
+      margin-left: 0;
+    }
+
     &:nth-child(4) {
-      position: absolute;
-      width: 435px;
-      top: -16px;
-      right: 10px;
-      margin-top: 0;
+      margin-top: -15px;
     }
 
     &:last-child {
@@ -518,26 +551,31 @@
   }
 
   .form__wrapper:nth-child(4) .form__wrapper-container {
-    width: 435px;
-    padding: 0;
+    width: 445px;
+    padding-left: 0;
   }
 
   .form__wrapper-elements {
     &--reverse {
       float: left;
-      width: 370px;
-      margin-bottom: 10px;
+      width: 372px;
+      margin-bottom: 12px;
+    }
+
+    &--reverse:last-child {
+      margin-bottom: 12px;
     }
 
     &--checkboxes {
+      flex-direction: row;
       flex-wrap: wrap;
-      align-content: space-between;
-      height: 177px;
+      justify-content: space-between;
+      align-content: flex-start;
     }
   }
 
   .form__wrapper-elements--reverse + .form__wrapper-elements--reverse {
-    margin-left: 74px;
+    margin-left: 73px;
   }
 
   .form__wrapper-elements--reverse input {
@@ -559,14 +597,25 @@
   }
 
   .form__progress-label {
-    margin-bottom: 0;
+    width: 267px;
 
-    &:nth-of-type(odd) {
-      margin-bottom: 43px;
+    &:nth-of-type(2) {
+      order: 4;
+    }
+
+    &:nth-of-type(3) {
+      margin-right: auto;
+      margin-left: 47px;
+    }
+
+    &:nth-of-type(4) {
+      order: 5;
+      margin-right: auto;
+      margin-left: 47px;
     }
 
     &:last-child {
-      margin-bottom: 0;
+      order: 6;
     }
   }
 
@@ -574,6 +623,7 @@
     width: 816px;
     height: 125px;
     padding: 12px 17px;
+    margin-top: 32px;
     margin-bottom: 38px;
   }
 
