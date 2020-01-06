@@ -92,7 +92,7 @@
 
 .form__progress-label {
   position: relative;
-  width: 265px;
+  width: 280px;
   margin-bottom: 43px;
 
   &:last-child {
@@ -341,7 +341,7 @@
 
   .form__fieldset {
     padding-right: 60px;
-    padding-left: 60px;
+    padding-left: 58px;
     border: 2px solid @gray-light;
 
     &--notbordered {
@@ -371,7 +371,7 @@
     }
 
     &--checkboxes {
-      margin-bottom: 42px;
+      margin-bottom: 43px;
     }
   }
 
@@ -426,6 +426,10 @@
       flex-direction: column-reverse;
       margin-bottom: 30px;
     }
+
+    &--reverse:last-child {
+      margin-bottom: 25px;
+    }
   }
 
   .form__wrapper-elements--row label {
@@ -439,6 +443,7 @@
 
   .form__wrapper-elements--reverse input {
     padding-right: 80px;
+    padding-left: 17px;
     margin-bottom: 12px;
   }
 
@@ -473,15 +478,16 @@
   }
 
   .form__text-label {
-    padding-left: 17px;
+    padding-left: 18px;
     margin-bottom: 0;
   }
 
   .form__description-text {
     width: 498px;
-    height: 190px;
-    margin-top: 35px;
-    margin-bottom: 47px;
+    height: 195px;
+    padding: 15px 18px;
+    margin-top: 38px;
+    margin-bottom: 42px;
   }
 
   .form__wrapper-elements .form__button {
@@ -513,6 +519,8 @@
   }
 
   .form__fieldset {
+    padding-right: 58px;
+
     &--notbordered {
       width: 435px;
     }
@@ -524,7 +532,7 @@
 
     &--checkboxes {
       padding-right: 0;
-      min-height: 238px;
+      min-height: 242px;
     }
   }
 
@@ -535,7 +543,6 @@
     }
 
     &:nth-child(4) {
-      width: 435px;
       margin-top: -15px;
     }
 
@@ -545,15 +552,19 @@
   }
 
   .form__wrapper:nth-child(4) .form__wrapper-container {
-    width: 435px;
+    width: 445px;
     padding-left: 0;
   }
 
   .form__wrapper-elements {
     &--reverse {
       float: left;
-      width: 370px;
-      margin-bottom: 10px;
+      width: 372px;
+      margin-bottom: 12px;
+    }
+
+    &--reverse:last-child {
+      margin-bottom: 12px;
     }
 
     &--checkboxes {
@@ -561,12 +572,11 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-content: flex-start;
-      min-height: 143px;
     }
   }
 
   .form__wrapper-elements--reverse + .form__wrapper-elements--reverse {
-    margin-left: 74px;
+    margin-left: 73px;
   }
 
   .form__wrapper-elements--reverse input {
@@ -588,19 +598,21 @@
   }
 
   .form__progress-label {
+    width: 267px;
+
     &:nth-of-type(2) {
       order: 4;
     }
 
     &:nth-of-type(3) {
       margin-right: auto;
-      margin-left: 50px;
+      margin-left: 47px;
     }
 
     &:nth-of-type(4) {
       order: 5;
       margin-right: auto;
-      margin-left: 50px;
+      margin-left: 47px;
     }
 
     &:last-child {
@@ -612,6 +624,7 @@
     width: 816px;
     height: 125px;
     padding: 12px 17px;
+    margin-top: 32px;
     margin-bottom: 38px;
   }
 
