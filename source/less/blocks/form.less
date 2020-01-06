@@ -92,6 +92,7 @@
 
 .form__progress-label {
   position: relative;
+  width: 265px;
   margin-bottom: 43px;
 
   &:last-child {
@@ -520,6 +521,11 @@
       min-height: 305px;
       padding: 45px 20px;
     }
+
+    &--checkboxes {
+      padding-right: 0;
+      min-height: 238px;
+    }
   }
 
   .form__wrapper {
@@ -551,9 +557,11 @@
     }
 
     &--checkboxes {
+      flex-direction: row;
       flex-wrap: wrap;
-      align-content: space-between;
-      height: 177px;
+      justify-content: space-between;
+      align-content: flex-start;
+      min-height: 143px;
     }
   }
 
@@ -580,14 +588,23 @@
   }
 
   .form__progress-label {
-    margin-bottom: 0;
+    &:nth-of-type(2) {
+      order: 4;
+    }
 
-    &:nth-of-type(odd) {
-      margin-bottom: 43px;
+    &:nth-of-type(3) {
+      margin-right: auto;
+      margin-left: 50px;
+    }
+
+    &:nth-of-type(4) {
+      order: 5;
+      margin-right: auto;
+      margin-left: 50px;
     }
 
     &:last-child {
-      margin-bottom: 0;
+      order: 6;
     }
   }
 
