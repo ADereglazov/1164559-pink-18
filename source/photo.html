@@ -11,6 +11,11 @@
 </head>
 <body>
   <header class="page-header">
+    <!-- У тэга nav присутствует один из классов в зависимости от состояния мобильного меню -->
+    <!-- main-nav--opened - меню открыто и отображается иконка с классом main-nav__toggle-image--cross,
+         иконка с классом main-nav__toggle-image--burger прячется -->
+    <!-- main-nav--closed - меню закрыто и отображается иконка с классом main-nav__toggle-image--burger,
+         иконка с классом main-nav__toggle-image--cross прячется -->
     <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
       <a class="main-nav__logo-link" href="index.html" aria-label="Логотип Pink - перейти на главную страницу">
         <svg class="main-nav__logo-image" width="74" height="23" role="img">
@@ -61,7 +66,7 @@
         <h2 class="gallery__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
         <ul class="gallery__list-comments">
           <li class="gallery__users-comment comment">
-            <a class="comment__link comment__link--first" href="#">
+            <a class="comment__link comment__link--first" href="#" aria-label="Панорама дня">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
@@ -90,7 +95,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
@@ -118,7 +123,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
@@ -146,7 +151,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
@@ -174,7 +179,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
@@ -202,7 +207,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
@@ -230,7 +235,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
@@ -296,13 +301,13 @@
               </button>
             </div>
             <div class="photoeditor__wrapper-inputs">
-              <label class="photoeditor__label" for="range1" tabindex="0">
+              <label class="photoeditor__label" for="range1" tabindex="0" aria-label="Регулировка обрезки">
                 <input class="photoeditor__range visually-hidden" type="range" id="range1" min="1" max="100" value="80" tabindex="-1">
               </label>
-              <label class="photoeditor__label photoeditor__label--hide" for="range2" tabindex="0">
+              <label class="photoeditor__label photoeditor__label--hide" for="range2" tabindex="0" aria-label="Регулировка контраста">
                 <input class="photoeditor__range visually-hidden" type="range" id="range2" min="1" max="100" value="20" tabindex="-1">
               </label>
-              <label class="photoeditor__label photoeditor__label--hide" for="range3" tabindex="0">
+              <label class="photoeditor__label photoeditor__label--hide" for="range3" tabindex="0" aria-label="Регулировка заливки">
                 <input class="photoeditor__range visually-hidden" type="range" id="range3" min="1" max="100" value="50" tabindex="-1">
               </label>
             </div>
