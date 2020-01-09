@@ -129,6 +129,8 @@
     padding: 23px 27px;
 
     &--first {
+      flex-direction: row;
+      flex-wrap: wrap;
       min-height: 121px;
       margin-top: 509px;
     }
@@ -136,22 +138,27 @@
 
   .comment__text {
     margin-bottom: auto;
+
+    &--first {
+      order: 2;
+      width: 100%;
+    }
   }
 
   .comment__like {
     display: flex;
+    align-items: center;
     padding-top: 10px;
 
     &--first {
-      position: absolute;
-      top: 25px;
-      right: 25px;
       min-width: 124px;
       padding: 0;
+      margin-left: auto;
     }
   }
 
-  .comment__like-text {
+  .comment__like-text,
+  .comment__like-counter {
     margin-right: 3px;
   }
 
