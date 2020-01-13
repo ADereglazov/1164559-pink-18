@@ -42,7 +42,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**/*.{jpg,png}",
-    "source/img/bg-triangle*.svg",
+    "source/img/bg-*.svg",
     "source/js/**/*.js"
   ], {
     base: "source"
