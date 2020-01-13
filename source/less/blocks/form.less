@@ -71,7 +71,8 @@
   display: flex;
   flex-direction: column;
 
-  &--checkboxes {
+  &--checkboxes,
+  &--radiobuttons {
     .list-reset();
   }
 }
@@ -184,12 +185,12 @@
   color: @blue-dark-opacity06;
 }
 
-.form__radio-label {
-  margin-bottom: 38px;
+.form__progress-radio + .form__progress-radio {
+  margin-top: 38px;
+}
 
-  &:last-child {
-    margin: 0;
-  }
+.form__radio-label {
+  display: block;
 
   &::before {
     content: "";
