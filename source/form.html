@@ -5,11 +5,17 @@
   <title>HTML Academy: Pink</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <script src="js/picturefill.js" async></script>
+  <script src="js/svgxuse.js" async></script>
 </head>
 <body>
   <header class="page-header">
+    <!-- У тэга nav присутствует один из классов в зависимости от состояния мобильного меню -->
+    <!-- main-nav--opened - меню открыто и отображается иконка с классом main-nav__toggle-image--cross,
+         иконка с классом main-nav__toggle-image--burger прячется -->
+    <!-- main-nav--closed - меню закрыто и отображается иконка с классом main-nav__toggle-image--burger,
+         иконка с классом main-nav__toggle-image--cross прячется -->
     <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
       <a class="main-nav__logo-link" href="index.html" aria-label="Логотип Pink - перейти на главную страницу">
         <svg class="main-nav__logo-image" width="74" height="23" role="img">
@@ -204,7 +210,7 @@
           <span class="copyright__text">Разработано</span>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
             <svg class="copyright__image" width="27" height="34" role="img">
-              <use xlink:href="img/sprite.svg#icon-academy"></use>
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
             </svg>
           </a>
         </div>

@@ -5,11 +5,17 @@
   <title>HTML Academy: Pink</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <script src="js/picturefill.js" async></script>
+  <script src="js/svgxuse.js" async></script>
 </head>
 <body>
   <header class="page-header">
+    <!-- У тэга nav присутствует один из классов в зависимости от состояния мобильного меню -->
+    <!-- main-nav--opened - меню открыто и отображается иконка с классом main-nav__toggle-image--cross,
+         иконка с классом main-nav__toggle-image--burger прячется -->
+    <!-- main-nav--closed - меню закрыто и отображается иконка с классом main-nav__toggle-image--burger,
+         иконка с классом main-nav__toggle-image--cross прячется -->
     <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
       <a class="main-nav__logo-link" href="index.html" aria-label="Логотип Pink - перейти на главную страницу">
         <svg class="main-nav__logo-image" width="74" height="23" role="img">
@@ -60,7 +66,7 @@
         <h2 class="gallery__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
         <ul class="gallery__list-comments">
           <li class="gallery__users-comment comment">
-            <a class="comment__link comment__link--first" href="#">
+            <a class="comment__link comment__link--first" href="#" aria-label="Панорама дня">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
@@ -76,11 +82,11 @@
                 <b class="comment__username">Анна</b>
                 <span class="comment__time">(5 минут назад)</span>
               </div>
-              <p class="comment__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <p class="comment__text comment__text--first">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
               <div class="comment__like comment__like--first">
                 <button class="comment__button" type="button" value="1" aria-label="Лайк">
                   <svg class="comment__like-image" width="13" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
                 <span class="comment__like-text">Нравится:</span>
@@ -89,7 +95,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
@@ -108,7 +114,7 @@
               <div class="comment__like">
                 <button class="comment__button" type="button" value="1" aria-label="Лайк">
                   <svg class="comment__like-image" width="13" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
                 <span class="comment__like-text">Нравится:</span>
@@ -117,7 +123,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
@@ -136,7 +142,7 @@
               <div class="comment__like">
                 <button class="comment__button" type="button" value="1" aria-label="Лайк">
                   <svg class="comment__like-image" width="13" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
                 <span class="comment__like-text">Нравится:</span>
@@ -145,7 +151,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
@@ -164,7 +170,7 @@
               <div class="comment__like">
                 <button class="comment__button" type="button" value="1" aria-label="Лайк">
                   <svg class="comment__like-image" width="13" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
                 <span class="comment__like-text">Нравится:</span>
@@ -173,7 +179,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
@@ -192,7 +198,7 @@
               <div class="comment__like">
                 <button class="comment__button" type="button" value="1" aria-label="Лайк">
                   <svg class="comment__like-image" width="13" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
                 <span class="comment__like-text">Нравится:</span>
@@ -201,7 +207,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
@@ -220,7 +226,7 @@
               <div class="comment__like">
                 <button class="comment__button" type="button" value="1" aria-label="Лайк">
                   <svg class="comment__like-image" width="13" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
                 <span class="comment__like-text">Нравится:</span>
@@ -229,7 +235,7 @@
             </div>
           </li>
           <li class="gallery__users-comment comment">
-            <a class="comment__link" href="#">
+            <a class="comment__link" href="#" aria-label="Фото">
               <picture>
                 <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
@@ -248,7 +254,7 @@
               <div class="comment__like">
                 <button class="comment__button" type="button" value="1" aria-label="Лайк">
                   <svg class="comment__like-image" width="13" height="12" role="img">
-                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
                   </svg>
                 </button>
                 <span class="comment__like-text">Нравится:</span>
@@ -280,28 +286,28 @@
             <div class="photoeditor__wrapper-buttons-tools">
               <button class="photoeditor__button-tool photoeditor__button-tool--cut photoeditor__button-tool--current" type="button" aria-label="Обрезка">
                 <svg class="photoeditor__icon-tool" width="44" height="44" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#editor-crop"></use>
+                  <use xlink:href="img/sprite.svg#icon-editor-crop"></use>
                 </svg>
               </button>
               <button class="photoeditor__button-tool photoeditor__button-tool--fill" type="button" aria-label="Заливка">
                 <svg class="photoeditor__icon-tool" width="44" height="44" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#editor-fill"></use>
+                  <use xlink:href="img/sprite.svg#icon-editor-fill"></use>
                 </svg>
               </button>
               <button class="photoeditor__button-tool photoeditor__button-tool--contrast" type="button" aria-label="Контраст">
                 <svg class="photoeditor__icon-tool" width="32" height="32" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite.svg#editor-contrast"></use>
+                  <use xlink:href="img/sprite.svg#icon-editor-contrast"></use>
                 </svg>
               </button>
             </div>
             <div class="photoeditor__wrapper-inputs">
-              <label class="photoeditor__label" for="range1" tabindex="0">
+              <label class="photoeditor__label" for="range1" tabindex="0" aria-label="Регулировка обрезки">
                 <input class="photoeditor__range visually-hidden" type="range" id="range1" min="1" max="100" value="80" tabindex="-1">
               </label>
-              <label class="photoeditor__label photoeditor__label--hide" for="range2" tabindex="0">
+              <label class="photoeditor__label photoeditor__label--hide" for="range2" tabindex="0" aria-label="Регулировка контраста">
                 <input class="photoeditor__range visually-hidden" type="range" id="range2" min="1" max="100" value="20" tabindex="-1">
               </label>
-              <label class="photoeditor__label photoeditor__label--hide" for="range3" tabindex="0">
+              <label class="photoeditor__label photoeditor__label--hide" for="range3" tabindex="0" aria-label="Регулировка заливки">
                 <input class="photoeditor__range visually-hidden" type="range" id="range3" min="1" max="100" value="50" tabindex="-1">
               </label>
             </div>
@@ -353,7 +359,7 @@
           <span class="copyright__text">Разработано</span>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
             <svg class="copyright__image" width="27" height="34" role="img">
-              <use xlink:href="img/sprite.svg#icon-academy"></use>
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
             </svg>
           </a>
         </div>

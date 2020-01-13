@@ -5,11 +5,17 @@
   <title>HTML Academy: Pink</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <script src="js/picturefill.js" async></script>
+  <script src="js/svgxuse.js" async></script>
 </head>
 <body>
   <header class="page-header">
+    <!-- У тэга nav присутствует один из классов в зависимости от состояния мобильного меню -->
+    <!-- main-nav--opened - меню открыто и отображается иконка с классом main-nav__toggle-image--cross,
+         иконка с классом main-nav__toggle-image--burger прячется -->
+    <!-- main-nav--closed - меню закрыто и отображается иконка с классом main-nav__toggle-image--burger,
+         иконка с классом main-nav__toggle-image--cross прячется -->
     <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
       <a class="main-nav__logo-link" aria-label="Логотип Pink">
         <svg class="main-nav__logo-image" width="74" height="23" role="img">
@@ -68,21 +74,21 @@
             <li class="download__item">
               <a class="download__link" href="https://www.apple.com/ru/ios/app-store" target="_blank" aria-label="Apple Store">
                 <svg class="download__image" width="47" height="56" role="img">
-                  <use xlink:href="img/sprite.svg#icon-apple"></use>
+                  <use xlink:href="img/sprite.svg#logo-apple"></use>
                 </svg>
               </a>
             </li>
             <li class="download__item">
               <a class="download__link" href="https://play.google.com/store" target="_blank" aria-label="Play Market">
                 <svg class="download__image" width="43" height="47" role="img">
-                  <use xlink:href="img/sprite.svg#icon-android"></use>
+                  <use xlink:href="img/sprite.svg#logo-android"></use>
                 </svg>
               </a>
             </li>
             <li class="download__item">
               <a class="download__link" href="https://www.microsoft.com/ru-ru/store/" target="_blank" aria-label="Windows Store">
                 <svg class="download__image" width="44" height="41" role="img">
-                  <use xlink:href="img/sprite.svg#icon-windows"></use>
+                  <use xlink:href="img/sprite.svg#logo-microsoft"></use>
                 </svg>
               </a>
             </li>
@@ -186,11 +192,17 @@
             </p>
           </blockquote>
         </div>
-        <p class="reviews__toggles slider__toggles">
-          <button class="slider__toggle slider__toggle--current" type="button" aria-label="Первый слайд"></button>
-          <button class="slider__toggle" type="button" aria-label="Второй слайд"></button>
-          <button class="slider__toggle" type="button" aria-label="Третий слайд"></button>
-        </p>
+        <ul class="reviews__toggles slider__toggles">
+          <li class="slider__item">
+            <button class="slider__toggle slider__toggle--current" type="button" aria-label="Первый слайд"></button>
+          </li>
+          <li class="slider__item">
+            <button class="slider__toggle" type="button" aria-label="Второй слайд"></button>
+          </li>
+          <li class="slider__item">
+            <button class="slider__toggle" type="button" aria-label="Третий слайд"></button>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="prices">
@@ -209,10 +221,10 @@
                 <b class="prices__name">Стандарт</b>
                 <span class="prices__price">3,99 USD</span>
                 <svg class="prices__img-hit" width="74" height="73">
-                  <use xlink:href="img/sprite.svg#bg-hit"></use>
+                  <use xlink:href="img/sprite.svg#icon-hit"></use>
                 </svg>
                 <svg class="prices__img-hit-tablet" width="61" height="61" role="img" aria-label="Хит продаж" focusable="false">
-                  <use xlink:href="img/sprite.svg#bg-hit-tablet"></use>
+                  <use xlink:href="img/sprite.svg#icon-hit-tablet"></use>
                 </svg>
                 <span class="prices__hit">ХИТ</span>
               </th>
@@ -259,11 +271,17 @@
             </tr>
           </tbody>
         </table>
-        <p class="prices__toggles slider__toggles">
-          <button class="slider__toggle" type="button" aria-label="Первый слайд"></button>
-          <button class="slider__toggle slider__toggle--current" type="button" aria-label="Второй слайд"></button>
-          <button class="slider__toggle" type="button" aria-label="Третий слайд"></button>
-        </p>
+        <ul class="prices__toggles slider__toggles">
+          <li class="slider__item">
+            <button class="slider__toggle" type="button" aria-label="Первый слайд"></button>
+          </li>
+          <li class="slider__item">
+            <button class="slider__toggle slider__toggle--current" type="button" aria-label="Второй слайд"></button>
+          </li>
+          <li class="slider__item">
+            <button class="slider__toggle" type="button" aria-label="Третий слайд"></button>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="contacts">
@@ -340,7 +358,7 @@
           <span class="copyright__text">Разработано</span>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
             <svg class="copyright__image" width="27" height="34" role="img">
-              <use xlink:href="img/sprite.svg#icon-academy"></use>
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
             </svg>
           </a>
         </div>
