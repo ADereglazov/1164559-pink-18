@@ -11,12 +11,14 @@ var csso = require("gulp-csso");
 var rename = require("gulp-rename");
 var del = require("del");
 
-var uglify = require('gulp-uglify');
+var uglify = require("gulp-uglify");
 var pipeline = require('readable-stream').pipeline;
 
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
+
+var htmlmin = require("gulp-htmlmin");
 
 var server = require("browser-sync").create();
 
@@ -90,8 +92,9 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("html", function () {
+gulp.task("html", () => {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 
