@@ -1,15 +1,27 @@
-.challenge {
-  min-height: 462px;
-  margin-bottom: -223px;
+.no-js .challenge,
+.no-webp .challenge {
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: @blue-darken;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
   }
+}
+
+.webp .challenge {
+  background-image: url("../img/bg-back-mobile@1x.webp");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.webp");
+  }
+}
+
+.challenge {
+  min-height: 462px;
+  margin-bottom: -223px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: @blue-darken;
 }
 
 .challenge__text {
@@ -24,14 +36,26 @@
 }
 
 @media (min-width: @tablet-width) {
-  .challenge {
-    min-height: 729px;
-    margin-bottom: -288px;
+  .no-js .challenge,
+  .no-webp .challenge {
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat @blue-darken;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
     }
+  }
+
+  .webp .challenge {
+    background: url("../img/bg-back-tablet@1x.webp") no-repeat @blue-darken;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.webp");
+    }
+  }
+
+  .challenge {
+    min-height: 729px;
+    margin-bottom: -288px;
   }
 
   .challenge__text {
@@ -44,14 +68,26 @@
 }
 
 @media (min-width: @desktop-width) {
-  .challenge {
-    min-height: 853px;
-    margin-bottom: -458px;
+  .no-js .challenge,
+  .no-webp .challenge {
     background: url("../img/bg-back-desktop@1x.jpg") no-repeat @blue-darken;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
+  }
+
+  .webp .challenge {
+    background: url("../img/bg-back-desktop@1x.webp") no-repeat @blue-darken;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.webp");
+    }
+  }
+
+  .challenge {
+    min-height: 853px;
+    margin-bottom: -458px;
   }
 
   .challenge__text {

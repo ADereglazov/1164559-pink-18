@@ -1,14 +1,26 @@
-.download {
+.no-js .download,
+.no-webp .download {
   background-image: linear-gradient(to bottom, transparent 63%, @blue-darken 63%), url("../img/bg-back-mobile@1x.jpg");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: linear-gradient(to bottom, transparent 63%, @blue-darken 63%), url("../img/bg-back-mobile@2x.jpg");
+  }
+}
+
+.webp .download {
+  background-image: linear-gradient(to bottom, transparent 63%, @blue-darken 63%), url("../img/bg-back-mobile@1x.webp");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: linear-gradient(to bottom, transparent 63%, @blue-darken 63%), url("../img/bg-back-mobile@2x.webp");
+  }
+}
+
+.download {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
   background-color: @blue-darken;
   color: @white;
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: linear-gradient(to bottom, transparent 63%, @blue-darken 63%), url("../img/bg-back-mobile@2x.jpg");
-  }
 }
 
 .download__wrapper {
@@ -98,14 +110,26 @@
 }
 
 @media (min-width: @tablet-width) {
-  .download {
+  .no-js .download,
+  .no-webp .download {
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: center;
-    background-size: cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
     }
+  }
+
+  .webp .download {
+    background-image: url("../img/bg-back-tablet@1x.webp");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.webp");
+    }
+  }
+
+  .download {
+    background-position: center;
+    background-size: cover;
   }
 
   .download__container {
@@ -151,11 +175,20 @@
 }
 
 @media (min-width: @desktop-width) {
-  .download {
+  .no-js .download,
+  .no-webp .download {
     background-image: url("../img/bg-back-desktop@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
+  .webp .download {
+    background-image: url("../img/bg-back-desktop@1x.webp");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.webp");
     }
   }
 
