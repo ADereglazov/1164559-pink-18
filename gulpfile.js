@@ -11,9 +11,14 @@ var csso = require("gulp-csso");
 var rename = require("gulp-rename");
 var del = require("del");
 
+var uglify = require("gulp-uglify");
+var pipeline = require('readable-stream').pipeline;
+
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
+
+var htmlmin = require("gulp-htmlmin");
 
 var server = require("browser-sync").create();
 
@@ -42,12 +47,19 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**/*.{jpg,png}",
-    "source/img/bg-triangle*.svg",
-    "source/js/**/*.js"
+    "source/img/bg-*.svg"
   ], {
     base: "source"
   })
     .pipe(gulp.dest("build"));
+});
+
+gulp.task("jsmin", function () {
+  return pipeline(
+    gulp.src("source/js/**/*.js"),
+    uglify(),
+    gulp.dest("build/js")
+  );
 });
 
 gulp.task("images", function () {
@@ -66,7 +78,7 @@ gulp.task("images", function () {
 });
 
 gulp.task("webp", function () {
-  return gulp.src("build/img/**/*.{png,jpg}")
+  return gulp.src("build/img/**/{iphone-*,panorama-*,photo-*}.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
@@ -80,8 +92,9 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("html", function () {
+gulp.task("html", () => {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 
@@ -110,6 +123,7 @@ gulp.task("build", gulp.series(
   "images",
   "webp",
   "sprite",
+  "jsmin",
   "css",
   "html"
 ));

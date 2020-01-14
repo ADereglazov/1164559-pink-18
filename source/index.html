@@ -5,6 +5,9 @@
   <title>HTML Academy: Pink</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <script src="js/picturefill.js" async></script>
   <script src="js/svgxuse.js" async></script>
@@ -69,24 +72,24 @@
             <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
             <img class="download__image-main" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="258" height="286" alt="Телефон в руке">
           </picture>
-          <a class="download__button" href="https://www.apple.com/ru/ios/app-store" target="_blank" aria-label="Apple Store">Скачать приложение</a>
+          <a class="download__button" href="https://www.apple.com/ru/ios/app-store" target="_blank" rel="noopener" aria-label="Apple Store">Скачать приложение</a>
           <ul class="download__list">
             <li class="download__item">
-              <a class="download__link" href="https://www.apple.com/ru/ios/app-store" target="_blank" aria-label="Apple Store">
+              <a class="download__link" href="https://www.apple.com/ru/ios/app-store" target="_blank" rel="noopener" aria-label="Apple Store">
                 <svg class="download__image" width="47" height="56" role="img">
                   <use xlink:href="img/sprite.svg#logo-apple"></use>
                 </svg>
               </a>
             </li>
             <li class="download__item">
-              <a class="download__link" href="https://play.google.com/store" target="_blank" aria-label="Play Market">
+              <a class="download__link" href="https://play.google.com/store" target="_blank" rel="noopener" aria-label="Play Market">
                 <svg class="download__image" width="43" height="47" role="img">
                   <use xlink:href="img/sprite.svg#logo-android"></use>
                 </svg>
               </a>
             </li>
             <li class="download__item">
-              <a class="download__link" href="https://www.microsoft.com/ru-ru/store/" target="_blank" aria-label="Windows Store">
+              <a class="download__link" href="https://www.microsoft.com/ru-ru/store/" target="_blank" rel="noopener" aria-label="Windows Store">
                 <svg class="download__image" width="44" height="41" role="img">
                   <use xlink:href="img/sprite.svg#logo-microsoft"></use>
                 </svg>
@@ -364,8 +367,7 @@
         </div>
       </div>
     </footer>
-  <script src="js/menu.js"></script>
-  <script src="js/map.js"></script>
+  <script src="js/script.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeAmob0Hv3GEXD7oCv6cKY2k-cofZbedo&callback=initMap"></script>
 </body>
 </html>

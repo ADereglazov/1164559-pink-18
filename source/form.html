@@ -5,8 +5,10 @@
   <title>HTML Academy: Pink</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="js/picturefill.js" async></script>
   <script src="js/svgxuse.js" async></script>
 </head>
 <body>
@@ -87,32 +89,44 @@
           <div class="form__wrapper-container container">
             <fieldset class="form__fieldset form__fieldset--checkboxes">
               <legend class="form__legend form__legend--checkboxes">Ваши безбашенные достижения в путешествии</legend>
-              <div class="form__wrapper-elements form__wrapper-elements--checkboxes">
-                <input class="form__progress-input visually-hidden" type="checkbox" name="box1" id="box1" checked>
-                <label class="form__progress-label" for="box1">
-                  <span class="form__progress-text">Сделал селфи с акулой</span>
-                </label>
-                <input class="form__progress-input visually-hidden" type="checkbox" name="box2" id="box2" checked>
-                <label class="form__progress-label" for="box2">
-                  <span class="form__progress-text">Обгорел на пляже</span>
-                </label>
-                <input class="form__progress-input visually-hidden" type="checkbox" name="box2" id="box3">
-                <label class="form__progress-label" for="box3">
-                  <span class="form__progress-text">Видел Чака Норриса</span>
-                </label>
-                <input class="form__progress-input visually-hidden" type="checkbox" name="box2" id="box4">
-                <label class="form__progress-label" for="box4">
-                  <span class="form__progress-text">Накупил сувениров</span>
-                </label>
-                <input class="form__progress-input visually-hidden" type="checkbox" name="box2" id="box5" checked>
-                <label class="form__progress-label" for="box5">
-                  <span class="form__progress-text">Удержал башню</span>
-                </label>
-                <input class="form__progress-input visually-hidden" type="checkbox" name="box2" id="box6">
-                <label class="form__progress-label" for="box6">
-                  <span class="form__progress-text">Разгромил отель</span>
-                </label>
-              </div>
+              <ul class="form__wrapper-elements form__wrapper-elements--checkboxes">
+                <li class="form__progress-checkbox">
+                  <input class="form__progress-input visually-hidden" type="checkbox" name="box1" id="box1" checked>
+                  <label class="form__progress-label" for="box1">
+                    <span class="form__progress-text">Сделал селфи с акулой</span>
+                  </label>
+                </li>
+                <li class="form__progress-checkbox">
+                  <input class="form__progress-input visually-hidden" type="checkbox" name="box2" id="box2" checked>
+                  <label class="form__progress-label" for="box2">
+                    <span class="form__progress-text">Обгорел на пляже</span>
+                  </label>
+                </li>
+                <li class="form__progress-checkbox">
+                  <input class="form__progress-input visually-hidden" type="checkbox" name="box3" id="box3">
+                  <label class="form__progress-label" for="box3">
+                    <span class="form__progress-text">Видел Чака Норриса</span>
+                  </label>
+                </li>
+                <li class="form__progress-checkbox">
+                  <input class="form__progress-input visually-hidden" type="checkbox" name="box4" id="box4">
+                  <label class="form__progress-label" for="box4">
+                    <span class="form__progress-text">Накупил сувениров</span>
+                  </label>
+                </li>
+                <li class="form__progress-checkbox">
+                  <input class="form__progress-input visually-hidden" type="checkbox" name="box5" id="box5" checked>
+                  <label class="form__progress-label" for="box5">
+                    <span class="form__progress-text">Удержал башню</span>
+                  </label>
+                </li>
+                <li class="form__progress-checkbox">
+                  <input class="form__progress-input visually-hidden" type="checkbox" name="box6" id="box6">
+                  <label class="form__progress-label" for="box6">
+                    <span class="form__progress-text">Разгромил отель</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
           </div>
         </div>
@@ -139,20 +153,26 @@
           <div class="form__wrapper-container container">
             <fieldset class="form__fieldset form__fieldset--radio">
               <legend class="form__legend form__legend--radiobuttons">С каким приложением путешествовали?</legend>
-              <div class="form__wrapper-elements">
-                <input class="form__radio-field visually-hidden" type="radio" name="app" id="ios-field" value="ios" checked>
-                <label class="form__radio-label" for="ios-field">
-                  <span class="form__radio-text">Pink для iOS</span>
-                </label>
-                <input class="form__radio-field visually-hidden" type="radio" name="app" id="android-field" value="android">
-                <label class="form__radio-label" for="android-field">
-                  <span class="form__radio-text">Pink на Android</span>
-                </label>
-                <input class="form__radio-field visually-hidden" type="radio" name="app" id="windows-field" value="windows">
-                <label class="form__radio-label" for="windows-field">
-                  <span class="form__radio-text">Windows Phone</span>
-                </label>
-              </div>
+              <ul class="form__wrapper-elements form__wrapper-elements--radiobuttons">
+                <li class="form__progress-radio">
+                  <input class="form__radio-field visually-hidden" type="radio" name="app" id="ios-field" value="ios" checked>
+                  <label class="form__radio-label" for="ios-field">
+                    <span class="form__radio-text">Pink для iOS</span>
+                  </label>
+                </li>
+                <li class="form__progress-radio">
+                  <input class="form__radio-field visually-hidden" type="radio" name="app" id="android-field" value="android">
+                  <label class="form__radio-label" for="android-field">
+                    <span class="form__radio-text">Pink на Android</span>
+                  </label>
+                </li>
+                <li class="form__progress-radio">
+                  <input class="form__radio-field visually-hidden" type="radio" name="app" id="windows-field" value="windows">
+                  <label class="form__radio-label" for="windows-field">
+                    <span class="form__radio-text">Windows Phone</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
           </div>
         </div>
@@ -234,7 +254,7 @@
       <button class="modal__button green-button" type="button">Закрыть окно</button>
     </div>
   </section>
-  <script src="js/menu.js"></script>
+  <script src="js/script.js"></script>
   <script src="js/modal.js"></script>
 </body>
 </html>

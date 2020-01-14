@@ -4,14 +4,12 @@
 
 .form__title {
   width: 280px;
-  font-size: 14px;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
   padding-top: 45px;
   padding-bottom: 20px;
   margin: 0 auto;
-  color: @blue-dark;
 
   &--hide {
     display: none;
@@ -20,7 +18,6 @@
 
 .form__text-label,
 .form__legend {
-  font-size: 14px;
   font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
@@ -70,6 +67,11 @@
 .form__wrapper-elements {
   display: flex;
   flex-direction: column;
+
+  &--checkboxes,
+  &--radiobuttons {
+    .list-reset();
+  }
 }
 
 .form__wrapper-elements--reverse + .form__wrapper-elements--reverse {
@@ -90,13 +92,13 @@
   margin-top: 20px;
 }
 
+.form__progress-checkbox + .form__progress-checkbox {
+  margin-top: 43px;
+}
+
 .form__progress-label {
   position: relative;
-  margin-bottom: 43px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  display: block;
 
   &::before {
     content: "";
@@ -180,12 +182,12 @@
   color: @blue-dark-opacity06;
 }
 
-.form__radio-label {
-  margin-bottom: 38px;
+.form__progress-radio + .form__progress-radio {
+  margin-top: 38px;
+}
 
-  &:last-child {
-    margin: 0;
-  }
+.form__radio-label {
+  display: block;
 
   &::before {
     content: "";
@@ -287,7 +289,6 @@
   text-align: center;
   text-transform: uppercase;
   margin-top: 40px;
-  color: @blue-dark;
 
   sup {
     color: @pink;
@@ -469,7 +470,7 @@
     padding-left: 18px;
   }
 
-  .form__progress-label {
+  .form__progress-checkbox {
     &:last-child {
       margin-bottom: 47px;
     }
@@ -599,8 +600,13 @@
     padding-left: 55px;
   }
 
-  .form__progress-label {
+  .form__progress-checkbox + .form__progress-checkbox {
+    margin-top: 0;
+  }
+
+  .form__progress-checkbox {
     width: 267px;
+    margin-bottom: 43px;
 
     &:nth-of-type(2) {
       order: 4;
@@ -619,6 +625,7 @@
 
     &:last-child {
       order: 6;
+      margin-bottom: 43px;
     }
   }
 
