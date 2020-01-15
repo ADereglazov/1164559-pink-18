@@ -78,7 +78,7 @@ gulp.task("images", function () {
 });
 
 gulp.task("webp", function () {
-  return gulp.src("build/img/**/{iphone-*,panorama-*,photo-*}.{png,jpg}")
+  return gulp.src("build/img/**/{iphone-*,panorama-*,photo-*,map-*}.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
