@@ -31,7 +31,7 @@ function LeftRightSlider(button, arrow) {
         if (arrow === 'left') {
           indexOfnext = (i + 1) % reviewsCount;
         } else if (arrow === 'right') {
-          indexOfnext = i ? i - 1 : reviewsCount - 1;
+          indexOfnext = (i + reviewsCount - 1) % reviewsCount;
         }
         reviewsItems[indexOfnext].classList.add('reviews__item--current');
         reviewsItems[i].classList.remove('reviews__item--current');
