@@ -186,15 +186,35 @@
             <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
           </svg>
         </button>
-        <div class="reviews__list slider__list">
-          <blockquote class="reviews__item slider__item">
-            <cite class="reviews__author-name">Николай Петров</cite>
-            <span class="reviews__author-details">25 лет, водитель трамвая</span>
-            <p class="reviews__text">
-              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-            </p>
-          </blockquote>
-        </div>
+        <ul class="reviews__list slider__list">
+          <li class="reviews__item reviews__item--current slider__item">
+            <blockquote class="reviews__item-details">
+              <cite class="reviews__author-name">Николай Петров</cite>
+              <span class="reviews__author-details">25 лет, водитель трамвая</span>
+              <p class="reviews__text">
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+              </p>
+            </blockquote>
+          </li>
+          <li class="reviews__item reviews__item slider__item">
+            <blockquote class="reviews__item-details">
+              <cite class="reviews__author-name">Петр Николаев</cite>
+              <span class="reviews__author-details">52 года, водитель кобылы</span>
+              <p class="reviews__text">
+                «Это приложение ничего не перевернуло! А еще я познакомился со своей будущей кобылой по фотографии!»
+              </p>
+            </blockquote>
+          </li>
+          <li class="reviews__item reviews__item slider__item">
+            <blockquote class="reviews__item-details">
+              <cite class="reviews__author-name">Вася Козлодоев</cite>
+              <span class="reviews__author-details">34 года, безработный</span>
+              <p class="reviews__text">
+                «Хорошее приложение! Но Angry Beards лучше!»
+              </p>
+            </blockquote>
+          </li>
+        </ul>
         <ul class="reviews__toggles slider__toggles">
           <li class="slider__item">
             <button class="slider__toggle slider__toggle--current" type="button" aria-label="Первый слайд"></button>
@@ -368,6 +388,7 @@
       </div>
     </footer>
   <script src="js/script.js"></script>
+  <script src="js/sliders.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeAmob0Hv3GEXD7oCv6cKY2k-cofZbedo&callback=initMap"></script>
 </body>
 </html>

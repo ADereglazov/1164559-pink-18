@@ -5,11 +5,23 @@
 }
 
 .reviews__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 352px;
   padding-top: 42px;
   padding-bottom: 42px;
 }
 
 .reviews__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.reviews__item-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,7 +49,7 @@
 }
 
 .reviews__list {
-  margin-bottom: 18px;
+  .list-reset();
 }
 
 @media (min-width: @tablet-width) {
@@ -47,6 +59,7 @@
   }
 
   .reviews__wrapper {
+    min-height: 311px;
     padding-top: 62px;
     padding-bottom: 15px;
   }
@@ -85,6 +98,8 @@
   }
 
   .reviews__wrapper {
+    display: block;
+    min-height: auto;
     padding-top: 190px;
     padding-bottom: 20px;
   }

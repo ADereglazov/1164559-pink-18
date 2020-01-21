@@ -78,7 +78,7 @@ gulp.task("images", function () {
 });
 
 gulp.task("webp", function () {
-  return gulp.src("build/img/**/{iphone-*,panorama-*,photo-*,map-*}.{png,jpg}")
+  return gulp.src("build/img/**/{iphone-*,panorama-*,photo-*,map-*,bg-back-*}.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
@@ -113,6 +113,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/img/{icon-*,logo-*}.svg", gulp.series("sprite"));
+  gulp.watch("source/js/**/*.js", gulp.series("jsmin", "refresh"));
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });

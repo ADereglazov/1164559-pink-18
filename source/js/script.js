@@ -1,3 +1,4 @@
+//================= Главное меню =================
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 
@@ -15,6 +16,23 @@ navToggle.addEventListener('click', function() {
   }
 });
 
+//========= Проверка поддержки браузером формата WebP =========
+var html = document.documentElement,
+  WebP = new Image();
+
+WebP.onload = WebP.onerror = function() {
+
+  if (WebP.height === 2) {
+    if (html.className.indexOf('no-webp') >= 0)
+      html.className = html.className.replace(/\bno-webp\b/, 'webp');
+    else html.className += ' webp';
+  } else if (html.className.indexOf('no-webp') >= -1) {
+    html.className += ' no-webp';
+  }
+};
+WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+
+//=========== Функция для интерактивной карты Google ===========
 function initMap() {
   var coordinates = {lat: 59.938700, lng: 30.323150},
     centerCoordinates = {lat: 59.939000, lng: 30.323200},
