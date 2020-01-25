@@ -103,10 +103,10 @@
   &:hover {
     cursor: pointer;
   }
-}
 
-.photoeditor__button-tool--current:hover {
-  cursor: default;
+  &--current:hover {
+    cursor: default;
+  }
 }
 
 .photoeditor__icon-tool {
@@ -142,7 +142,6 @@
   &::before {
     content: "";
     position: absolute;
-    right: 35px;
     transform: translateY(-45%);
     display: block;
     width: 15px;
@@ -152,13 +151,25 @@
     background-color: @white;
   }
 
+  &:first-child::before {
+    right: 35px;
+  }
+
+  &:nth-child(2)::before {
+    left: 22px;
+  }
+
+  &:last-child::before {
+    left: 93px;
+  }
+
   &:active::before {
     background-color: @pink;
   }
-}
 
-.photoeditor__label--hide {
-  display: none;
+  &--hide {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -248,14 +259,6 @@
 
     &:first-child::before {
       right: 40px;
-    }
-
-    &:nth-child(2)::before {
-      left: 22px;
-    }
-
-    &:last-child::before {
-      left: 93px;
     }
   }
 
