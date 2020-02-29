@@ -98,12 +98,13 @@
 
 .form__progress-label {
   position: relative;
-  display: block;
+  display: flex;
 
   &::before {
     content: "";
     display: inline-block;
     vertical-align: middle;
+    flex-shrink: 0;
     width: 39px;
     height: 39px;
     border: 2px solid @gray-lighter;
@@ -187,12 +188,13 @@
 }
 
 .form__radio-label {
-  display: block;
+  display: flex;
 
   &::before {
     content: "";
     display: inline-block;
     vertical-align: middle;
+    flex-shrink: 0;
     width: 37px;
     height: 37px;
     border: 11px solid @white;
